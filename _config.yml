@@ -1,8 +1,8 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: BCP 101 - Summer 2026 - UC Davis
+description: Computational pedagogy for educators
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+url: https://ngs-docs.github.io/2026-summer-bcp-101/
 
-aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+#aux_links:
+#  Template Repository: https://github.com/just-the-docs/just-the-docs-template
