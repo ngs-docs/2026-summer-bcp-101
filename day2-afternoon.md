@@ -1,6 +1,6 @@
 ---
-title: Plotting in Python
-
+title: Day 3 afternoon - Plotting in Python
+layout: home
 nav_order: 4
 ---
 

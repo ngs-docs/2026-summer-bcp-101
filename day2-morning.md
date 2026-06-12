@@ -1,5 +1,6 @@
 ---
-title: 'Plotting and Programming in Python: Introduction, Variables, and DataFrames'
+title: Day 2 morning - Programming in Python: Introduction, Variables, and DataFrames
+layout: home
 nav_order: 3
 ---
 
