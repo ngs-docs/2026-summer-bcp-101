@@ -1,6 +1,7 @@
 ---
 title: Day 3 - Building your own JupyterLite Web site
 layout: home
+nav_order: 5
 ---
 
 # Revisiting JupyterLite and notebooks

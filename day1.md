@@ -1,6 +1,7 @@
 ---
 title: Day 1 - welcome and introduction!
 layout: home
+nav_order: 2
 ---
 
 # Welcome and introduction!
