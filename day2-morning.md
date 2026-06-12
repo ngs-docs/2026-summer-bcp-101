@@ -4,10 +4,6 @@ layout: home
 nav_order: 3
 ---
 
----
-title: 'Plotting and Programming in Python: Introduction, Variables, and DataFrames'
----
-
 # Plotting and Programming in Python: Introduction, Variables, and DataFrames
 
 **Based on:** Software Carpentry, *Plotting and Programming in Python*, Gapminder instructor materials: <https://swcarpentry.github.io/python-novice-gapminder/instructor/index.html>
