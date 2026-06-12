@@ -5,4 +5,50 @@ layout: home
 
 # Welcome and introduction!
 
-Content goes here.
+Introductions
+
+Scope & goals
+
+Structure & schedule
+
+Expectations
+
+Technology overview - brief
+- Motivations/restrictions: local compute, etc.
+- JupyterLite
+- Python
+- Pandas
+- Matplotlib
+- GitHub
+- Markdown
+
+Demo/overview of next two days
+
+<a href="#hands-on">
+
+# Hands-on introduction to technology: 
+
+* Jupyterlite
+* Jupyter notebooks: introduction to interface
+    * hello world
+    * doing basic math, simple plots
+    * more complicated things: loading data, stats, more complicated visualization
+* Technical details, mark 1
+    * Where are files located? More.
+    * caching
+* JupyterLab interface: same computer, different look
+* More Jupyter Notebooks:
+    * executing single cell, multiple cells
+    * order of compute
+    * general advice: restart and run all
+* Teaching strategies
+    * questions and answers
+    * pre-staged data
+    * faded examples
+
+* Manipulating and working with Jupyter nb
+    * downloading and uploading files/figures
+    * printing and/or saving
+    * saving/clearing data etc.
+* github, Browser local, clearing cache (chrome, firefox, safari, ??), incognito, updating files how and when
+

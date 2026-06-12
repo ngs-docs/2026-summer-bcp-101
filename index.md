@@ -6,18 +6,22 @@ nav_order: 1
 
 ## Schedule
 
-June 15th-June 18th.
+The workshop will run each day from Monday, June 15th to Thursday, June 18th.
 
-Morning: 10am-noon.
+Mornings will start at 10am and go 'til noon.
 
-Afternoon: 1pm-3pm.
+Afternoons will start at 1pm and go 'til 3pm.
 
 ### Monday, June 15 - morning
 
 Introductions
+
 Scope & goals
+
 Structure & schedule
+
 Expectations
+
 Technology overview - brief
 - Motivations/restrictions: local compute, etc.
 - JupyterLite
@@ -25,16 +29,9 @@ Technology overview - brief
 - Pandas
 - Matplotlib
 - GitHub
-- markdown
+- Markdown
 
 Demo/overview of next two days
-
-** configure site
-
-Notes:
-- GitHub accounts will be needed for day 3
-- Should we record (for class use only)?
-- What kinds of formative assessment should we do?
 
 ### Monday, June 15 - afternoon
 
