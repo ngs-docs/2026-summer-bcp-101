@@ -6,7 +6,7 @@ nav_order: 4
 
 # Plotting in Python
 
-Once we've got data ready, we can visualize data in a variety of different ways. Here, we'll walk through some of the utility available through the `matplotlib` library and it's sublibrary `pyplot`!
+Once we've got data ready, we can visualize data in a variety of different ways. Here, we'll walk through some of the utility available through the `matplotlib` library and it's sublibrary `pyplot`.
 
 ## The basics of `matplotlib`
 Plotting in `matplotlib` is oriented around plot objects which have specific layers/components. We generate an initial plot by using the `.plot()` function. Once we have generated a plot, we can modify the components using functions which update the plot currently in the environment. 
@@ -14,19 +14,19 @@ Plotting in `matplotlib` is oriented around plot objects which have specific lay
 Examples of these functions include:
 - `.title()` : assign/change title associated with the plot
 - `.xlabel()`: assign/change X-axis label
-- `.ylabel()`: assign/change X-axis label
+- `.ylabel()`: assign/change Y-axis label
 - `.legend()`: assign/change legend
 
-Today, we'll walk through generating some basic plot types, as well as some examples using the `gapminder` dataset.
+Today, we'll walk through generating some basic plot types, as well as some examples using the `gapminder` dataset. 
 
 If you would like to learn more, extensive [documentation](https://matplotlib.org/stable/users/index.html) is available!
 
 ## Part 1: Plotting from lists
 
 ### 1.1 Working with paired continuous datasets: line graphs
-When dealing with datasets which contain strictly continuous variables, we'll typically go about visualiztion using either line plots or scatter plots. Let's walk through how we can generate these!
+When dealing with datasets which contain strictly continuous variables (e.g. can be represented on a scale), we'll typically visualize it using either line plots or scatter plots. Let's walk through how we can generate these.
 
-Our first step is to load in the `matplotlib` library. Note that we assign the library the alias `plt`, and so we'll preceed any functions that we call from this library with this alias
+Our first step is to load in the `matplotlib` library. Note that we assign the library the alias `plt`, and so we'll preceed any functions that we call from the 'matplotlib' library with this alias instead. 
 
 ```python
 #import matplotlib
@@ -41,7 +41,7 @@ XCoords = [0, 1, 2, 3]
 YCoords = [0, 1, 2, 3]
 ```
 
-We can then turn these lists into a line plot using the `.plot()` function, which takes two positional arguments corresponding to the X (first argument) and Y (second argument) coordinates of points on the line. The underlying assumption is that the lists are paired, i.e. the first elements of list X and list Y correspond with the coordinates of the first point.
+We can then turn these lists into a line plot using the `.plot()` function, which takes two positional arguments corresponding to the X (first argument) and Y (second argument) coordinates of points on the line. The underlying assumption is that the lists are paired with respect to the order that the numbers appear, i.e. the first elements of list X and list Y correspond with the coordinates of the first point. In this case, the first position would be (0, 0). 
 
 ```python
 #line plot
@@ -61,7 +61,7 @@ plt.ylabel('Y coordinates') # add Y axis labels
 ```
 ![fig2](https://hackmd.io/_uploads/HklQvavbGe.png)
 
-If we wanted to plot multiple datasets on the same plot, we can do so by calling `.plot()` multiple times. Let's first start by creating some additional Y coordinates:
+If we wanted to plot multiple datasets on the same plot, we can do so by calling `.plot()` multiple times. Let's first start by creating some additional Y coordinates. We're going to raise every number in the YCoords list to the second and third power, respectively. This is denoted by '**'. 
 
 ```python
 #get quadratic and cubic Y coodrinates
@@ -85,7 +85,7 @@ plt.legend() # add legend
 
 ### 1.2 Working with paired continuous datasets: scatterplots
 
-If we wanted to plot points themselves as a scatterplot, we can simply replace the `.plot()` function with the `.scatter()` function. 
+Line graphs connected all the paired data. If we wanted to plot points themselves, we would use a scatterplot. To do this, we can simply replace the `.plot()` function with the `.scatter()` function. 
 
 ```python
 #scatter plot
@@ -112,7 +112,7 @@ speciesCount = [3, 18, 31, 38, 43, 44, 45]
 plt.scatter(area, speciesCount)
 ```
 :::spoiler Answer
-The lists associated with X and Y coordinates are mismatched in length (one list has more elements than the other). Because `.plot()` assumes a paired structure in supplied lists, it is able to reconcile lists with unequal lengths. Intuitively, this makes sense because there is now no clear, logical way to map elements across lists.
+The lists associated with X and Y coordinates don't have the same length - one list has more elements than the other. Because `.plot()` assumes a paired structure in its lists, it isn't able to reconcile lists with unequal lengths. Intuitively, this makes sense because there is now no clear, logical way to map elements across lists.
 :::
 :::success
 **Exercise 13**
@@ -140,19 +140,19 @@ The legend isn't being displayed correctly because no labels were assigned to th
 :::
 
 ### 1.3 Working with combined discrete and continuous data: bar graphs 
-For datasets which combine categorical and continuous data, bar graphs and boxplots allow for straightforward comparison of a continuous variable across discrete categories.
+So far we've only looked at continuous data, but what if we wanted to combine it with our discrete data? This could include grouping our continuous variables (ex. height of students) with demographic information (ex. gender, grade level) which would be the discrete variables. For datasets which combine discrete and continuous data, bar graphs and boxplots allow for straightforward comparison of a continuous variable across these discrete categories. 
 
-To begin with, let's generate a dataset of continuous variables associated with levels of a discrete factor. We will also introduce a new library here, `numpy`, which provides some useful utility for performing various numerical operations.
+To begin with, let's generate a dataset of continuous variables and discrete variables. Here, we'll assign each of our continuous variables a level which increments sequentially by 1. We will also introduce a new library here, `numpy`, which provides some useful utility for performing various numerical operations.
 
 ```python
-#import numpy
+#import numpy(
 import numpy as np
 
 #generate variables
 YBar = np.random.randint(low=10,high=20,size=5)# continuous variable (Y): generate 5 random integers between 10 and 20
 levels = np.arange(start=0,stop=len(YBar),step=1) # discrete variable (X): generate N evenly spaced integers, where N is the number of elements in the Y array 
 ```
-Note that although we are thinking of our X variable as discrete/categorical levels, we model it here as a integer. The primary reason for this is to simplify the process of changing positioning of our bars on the X axis (this will be handy when we plot multiple series).
+Note that although we are thinking of our X variable as a discrete variable, we model it here as a integer. The primary reason for this is to simplify the process of changing positions of our bars on the X axis - this will be handy when we plot multiple series. 
 
 To turn this into a barplot, we'll call the `.bar()` function.
 
@@ -166,7 +166,7 @@ plt.yticks(np.arange(start=0,stop=20,step=2)) # change Y axis ticks (0 - 20, int
 ```
 ![fig5](https://hackmd.io/_uploads/ryrCAeFWGe.png)
 
-We can plot multiple data series in a side-by-side manner by slightly changing the X-axis positioning of our bars. Let's define a variable, `barWidth`, which will describe the relative width of our bars (standard width of bars being one). We'll then shift the bars for each series either `barWidth / 2` to the left or right of the X axis tick!
+We can plot multiple data series in a side-by-side manner by slightly changing the X-axis positioning of our bars. Let's define a variable, `barWidth`, which will describe the relative width of our bars. Since the default width of bars is one, we'll then shift the bars for each series either `barWidth / 2` to the left or right of the X axis tick.
 
 ```python
 #generate second data series
@@ -186,7 +186,7 @@ plt.legend() # add legend
 ```
 ![fig6](https://hackmd.io/_uploads/SkeiH-Fbfg.png)
 
-We can do other cool things like arrange these vertically to create a stacked bar chart and error bars!
+We can do other cool things like arrange these vertically to create a stacked bar chart and error bars.
 
 ```python
 YError1 = np.random.uniform(low=1, high=5, size=5) # randomly sample 5 floats (real numbers) between 1 and 5
@@ -236,10 +236,10 @@ np.random.normal(scale=6,size=500,loc=30)
 ```
 :::
 
-We'll then nest these data arrays within a list.
+We'll then put these generated lists within another list. This creates a nested list because the lists are nested in another list.
 
 ```python
-# nest arrays in list
+# nest list in list
 YBoxAll = [YBox1,YBox2,YBox3]
 ```
 
@@ -253,9 +253,9 @@ plt.title('Boxplot') # Main title
 ```
 ![fig8](https://hackmd.io/_uploads/S1vwQzKbGx.png)
 
-By default, the horizontal lines inside each of our boxes represnt median values of our distributions, with the lower and upper bounds of the box defining the 25th and 75th percentiles respectively. Whiskers stretch out to either the most extreme datapoint, or 1.5x the inter-quartile range (whichever is less).
+By default, the horizontal lines inside each of our boxes represent median values of our distributions, with the lower and upper bounds of the box defining the 25th and 75th percentiles, respectively. Whiskers stretch out to either the most extreme datapoint, or 1.5x the inter-quartile range (whichever is less).
 
-We can combine the `.boxplot()` funciton and the `.scatter()` function to overlay our raw data points on top of the boxplot.
+We can combine the `.boxplot()` function and the `.scatter()` function to overlay our raw data points on top of the boxplot.
 
 ```python
 plt.boxplot(YBoxAll, tick_labels=['SeriesA', 'SeriesB', 'SeriesC'])# plot data series as boxplot
@@ -267,7 +267,7 @@ plt.title('Boxplot with overlayed points') # Main title
 ```
 ![fig9](https://hackmd.io/_uploads/B1yjVGKbGx.png)
 
-You'll notice that our points are all overlaying one another, which doesn't look super pretty. We can make this a little better by adding some small variance to the X axis coordinates of our data points (a "jitter"). At the same tim, we'll also make the points a little smaller and add some transperancy to them setting an alpha parameter.
+You'll notice that our points are all overlaying one another, which doesn't look very pretty. We can make this a little better by adding some small variance to the X axis coordinates of our data points (a "jitter"). At the same time, we'll also make the points a little smaller and add some transparancy to them setting an `alpha` parameter.
 
 ```python
 plt.boxplot(YBoxAll, tick_labels=['SeriesA', 'SeriesB', 'SeriesC']) # plot data series as boxplot
@@ -293,7 +293,7 @@ By moving the values assigned to these arguments closer to the true X coordinate
 
 
 ## Part 2: Plotting from a Pandas dataframe
-Everything we've worked through has been oriented around  datasets represented as lists or arrays. What is actually probably more common is for us to work with datasets stored as dataframes, so let's see how we might translate some of what we've done so far into this context!
+Everything we've worked through has been oriented around  datasets represented as lists. What is actually probably more common is for us to work with datasets stored as dataframes, so let's see how we might translate some of what we've done so far into this context!
 
 Let's start by loading in the `gapminder` dataset we've previously worked with.
 
