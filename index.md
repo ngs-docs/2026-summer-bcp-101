@@ -30,9 +30,11 @@ Data manipulation and plotting in Python
 
 ### Wednesday, June 17 - morning
 
-Revisiting JupyterLite and notebooks
+[Revisiting JupyterLite and notebooks](day3.html#revisiting-jupyterlite-and-notebooks)
 
 ### Wednesday, June 17 - afternoon
+
+[Building and configuring your own custom site](day3.html#building-and-configuring-your-own-custom-site)
 
 ### Thursday, June 18 - morning
 

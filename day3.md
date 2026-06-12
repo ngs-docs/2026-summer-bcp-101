@@ -3,7 +3,16 @@ title: Day 3 - Building your own JupyterLite Web site
 layout: home
 ---
 
-## How to build and configure your own teaching site
+# Revisiting JupyterLite and notebooks
+
+Schematic: how JupyterLite works.
+
+Caching and local copies.
+
+Implications: data and notebooks need to be prestaged. Libraries need
+to be provided.
+
+# How to build and configure your own custom site
 
 following 
 https://jupyterlite.readthedocs.io/en/stable/quickstart/deploy.html
