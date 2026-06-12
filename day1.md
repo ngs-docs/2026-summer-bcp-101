@@ -24,9 +24,7 @@ Technology overview - brief
 
 Demo/overview of next two days
 
-<a href="#hands-on">
-
-# Hands-on introduction to technology: 
+# Hands-on introduction to technology
 
 * Jupyterlite
 * Jupyter notebooks: introduction to interface

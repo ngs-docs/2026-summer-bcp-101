@@ -18,7 +18,7 @@ Afternoons will start at 1pm and go 'til 3pm.
 
 ### Monday, June 15 - afternoon
 
-[Hands-on introduction to technology](day1.html#hands-on))
+[Hands-on introduction to technology](day1.html#hands-on-introduction-to-technology)
 
 ### Tuesday, June 16 - morning
 
@@ -30,12 +30,15 @@ Data manipulation and plotting in Python
 
 ### Wednesday, June 17 - morning
 
+Revisiting JupyterLite and notebooks
+
 ### Wednesday, June 17 - afternoon
 
 ### Thursday, June 18 - morning
 
-TBD
+Brainstorming and/or small groups: designing your own curriculum and site
 
 ### Thursday, June 18 - afternoon
 
-TBD
+Brainstorming and/or small groups: designing your own curriculum and
+site - continued.
