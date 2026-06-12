@@ -5,16 +5,19 @@ layout: home
 
 # Welcome and introduction!
 
-Introductions
+## Introductions
 
-Scope & goals
+## Scope & goals
 
-Structure & schedule
+## Structure & schedule
 
-Expectations
+## Expectations
 
-Technology overview - brief
-- Motivations/restrictions: local compute, etc.
+## Technology
+
+A brief technology overview
+
+ Motivations/restrictions: local compute, etc.
 - JupyterLite
 - Python
 - Pandas
@@ -22,7 +25,10 @@ Technology overview - brief
 - GitHub
 - Markdown
 
-Demo/overview of next two days
+## Demo
+
+Demo/overview of next two days to show you how all of these buzzwords
+work together.
 
 # Hands-on introduction to technology
 
