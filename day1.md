@@ -67,6 +67,11 @@ give a more thorough introduction. On Wednesday we'll talk about how it
 works underneath and where some of the challenges lie, and then show you
 the approaches needed to build your own customized site.
 
+- start up jupyterlite from a customized site
+- load in data set from spreadsheet
+- plot relationships present in data set
+- provide a faded example of some kind
+
 # Hands-on introduction to technology
 
 ## JupyterLite
