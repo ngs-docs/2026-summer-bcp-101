@@ -12,7 +12,7 @@ nav_order: 3
 
 ---
 
-## Learning goals
+## Learning Goals
 
 By the end of this notebook, learners should be able to:
 
@@ -30,7 +30,7 @@ By the end of this notebook, learners should be able to:
 
 ---
 
-## Required setup
+## Required Setup
 
 The Carpentries lesson assumes that learners have Python 3 installed and have downloaded the Gapminder lesson data. The expected folder structure is:
 
@@ -86,27 +86,21 @@ A Jupyter Notebook is made of **cells**. The two main cell types are:
 
 ## 1.3 Starting JupyterLab
 
-From a terminal or Anaconda Prompt, start JupyterLab with:
+We'll use JupyterLite to open a JupyerLab notebook. We can use this [link](https://ngs-docs.github.io/2026-summer-bcp-101-jupyterlite/) to directly access JupyterLite. It can also be found on our Github pages [here](https://github.com/ngs-docs/2026-summer-bcp-101-jupyterlite) and opened by clicking the link. From there, we'll open a JupyterLab notebook using the first icon under Notebook. 
 
-```bash
-jupyter lab
-```
+![bcp101_jupyterlab](https://hackmd.io/_uploads/S1j9E0FZMe.jpg)
 
 This launches a local server and opens JupyterLab in your web browser. The browser is the interface, but the Python code runs through the Jupyter server and kernel.
 
-## 1.4 Creating a new notebook
+## 1.4 Managing a Notebook
 
-In JupyterLab:
-
-1. Open the Launcher.
-2. Under **Notebook**, select **Python 3**.
-3. Rename the notebook to something descriptive, such as:
+Once opened, we can see our notebook on the right, and a few buttoms on the right. The first, shaped like a folder, is our directory which is where our notebook is housed. It is currently named "Untitled.ipynb", but we can rename it by right-clicking on the file and selecting "Rename". Let's rename it to something more intuitive, like:
 
 ```text
-gapminder_intro_variables_dataframes.ipynb
+bcp101_day2_morning_intro_python.ipynb
 ```
 
-## 1.5 Command mode vs. Edit mode
+## 1.5 Command Mode vs. Edit Mode
 
 Jupyter notebooks have two important modes:
 
@@ -127,7 +121,7 @@ Useful shortcuts in Command mode:
 | `y` | Convert cell to Code |
 | `Shift` + `Enter` | Run selected cell |
 
-## 1.6 Markdown basics
+## 1.6 Markdown Basics
 
 Markdown is a lightweight way to format text. Try putting the following into a Markdown cell:
 
@@ -146,7 +140,7 @@ Markdown is a lightweight way to format text. Try putting the following into a M
 
 When you run the Markdown cell, Jupyter renders it as formatted text.
 
-### Practice: Markdown cell
+### Practice: Markdown Cell
 
 Create a Markdown cell with:
 
@@ -158,7 +152,7 @@ Create a Markdown cell with:
 
 # Part 2 — Variables and Assignment
 
-## 2.1 What is a variable?
+## 2.1 What is a Variable?
 
 A **variable** is a name that stores a value. In Python, the assignment operator `=` assigns the value on the right to the variable name on the left.
 
@@ -172,11 +166,7 @@ Here:
 - `age` stores the integer value `42`
 - `first_name` stores the string value `'Ahmed'`
 
-The variable is created at the moment you assign a value to it.
-
-## 2.2 Variable naming rules
-
-Python variable names:
+There are some rules about what can and cannot be a variable. For example, Python variable names:
 
 - can contain letters, numbers, and underscores
 - cannot start with a number
@@ -196,17 +186,55 @@ Invalid or poor examples:
 
 ```python
 # Invalid: starts with a number
-# 1st_name = 'Ahmed'
+1st_name = 'Ahmed'
 
 # Valid, but not descriptive
 x = 42
 
 # Valid, but confusing because capitalization matters. These are two different variables. 
 Age = 42
-age = 43
+age = 55
 ```
 
-## 2.3 Displaying values with `print()`
+## 2.2 Variable Types 
+
+In Python, variables can store different kinds of information. The kind of information stored in a variable is called its **type**.
+
+For example, a variable can store a number, a word, a sentence, or a true/false value. Python uses the value assigned to the variable to figure out what type it is.
+
+Some common variable types are:
+
+| Type    | Name    | Description                   | Example                  |
+| ------- | ------- | ----------------------------- | ------------------------ |
+| `int`   | integer | A whole number                | `year = 2024`            |
+| `float` | float   | A number with a decimal point | `life_expectancy = 72.5` |
+| `str`   | string  | Any amount of text made up of characters, such as letters, numbers, punctuation, or spaces           | `country = "Canada"`, `long_sentence = "This is also a string."`     |
+| `bool`  | boolean | A true or false value         | `is_large = True`        |
+
+
+Each variable stores a different type of information. The variable `year` stores a whole number, `life_expectancy` stores a decimal number, `country` and `long_sentence` store text, and `is_large` stores a true/false value.
+
+We can check the type of a variable using the `type()` function:
+
+```python
+type(country)
+```
+
+This will show us that `country` is a string, or `str`, because it stores text. Importantly, if we assign a number in quotations, then it becomes a string and not an integer, or `int`, as shown below.
+
+```python
+is_number = 1
+type(is_number)
+```
+```python
+is_string = "1"
+type(is_string)
+```
+
+Understanding variable types is useful because Python treats different types of information in different ways. For example, Python can do math with numbers, but text values need to be handled differently.
+
+
+## 2.3 Displaying Values with `print()`
 
 The `print()` function displays values as text.
 
@@ -214,7 +242,7 @@ The `print()` function displays values as text.
 age = 42
 first_name = 'Ahmed'
 
-print(first_name, 'is', age, 'years old')
+print(first_name, 'is', age, 'years old.')
 ```
 
 Expected output:
@@ -225,7 +253,27 @@ Ahmed is 42 years old
 
 `print()` automatically adds spaces between comma-separated items and moves to a new line at the end.
 
-## 2.4 Variables must exist before use
+### Storing Strings with Other Variables
+
+In the printed statement `Ahmed is 42 years old`, we used several variables alongside some text. But what if we wanted to store this in another variable? If we tried to put this in a variable, such as:
+
+```python
+variable = first_name, 'is', age, 'years old.'
+```
+
+It would return this as a list of different elements instead of a single printed statement. 
+
+```python
+(first_name, 'is', age, 'years old.')
+```
+
+If we wanted to keep these as one string, we can use a **f-string** which lets us call the value that the variable is storing instead of the variable itself. It is denoted with a particular syntax as shown here:
+
+```python
+f"{first_name} is {age} years old."
+```
+
+## 2.4 Variables Must Exist Before Use
 
 If you try to use a variable before assigning it, Python raises a `NameError`.
 
@@ -244,7 +292,7 @@ This often means one of two things:
 1. The variable was never created.
 2. The variable name was misspelled.
 
-### Important Jupyter note: execution order matters
+### Important Jupyter Note: Execution Order Matters
 
 In a notebook, Python remembers cells that have already been run. The order in which cells are **executed** matters more than the order in which they appear.
 
@@ -260,13 +308,10 @@ But this cell creates the variable:
 myval = 1
 ```
 
-If you run the assignment cell first and then run `print(myval)`, it works. To check that a notebook runs cleanly from top to bottom, use:
+If you run the assignment cell first and then run `print(myval)`, it works. To check that a notebook runs cleanly from top to bottom, use the icon showing two arrows. If you have over it, it says "Restart the kernal and run all cells". This ensures everything is ran in the correct order. 
 
-```text
-Kernel → Restart Kernel and Run All Cells
-```
 
-## 2.5 Updating variables
+## 2.5 Updating Variables
 
 Variables can be used in calculations.
 
@@ -290,90 +335,290 @@ age = age + 3
 
 means: take the current value of `age`, add `3`, and assign the result back to `age`.
 
-## 2.6 Tracing variable changes
+## 2.6 Creating a List
 
-Trace the values step by step:
+What if we have multiple values? Could we assign them to a single variable? We can using a **list**. Lists are useful when we want to keep related pieces of information together.
 
-```python
-x = 1.0
-y = 3.0
-swap = x
-x = y
-y = swap
-
-print('x:', x)
-print('y:', y)
-print('swap:', swap)
-```
-
-Expected output:
-
-```text
-x: 3.0
-y: 1.0
-swap: 1.0
-```
-
-This uses `swap` as temporary storage so that the values of `x` and `y` can be exchanged.
-
-## 2.7 Strings, indexing, and slicing
-
-A **string** is text stored in quotes.
+For example, we could store several country names in one list:
 
 ```python
-atom_name = 'carbon'
+countries = ["Canada", "Mexico", "United States", "Brazil"]
 ```
 
-You can access characters by position using an **index**. Python counts from zero.
+This list contains four values. Each value in a list is called an **element**.
+
+Lists are written using square brackets `[]`, and each element is separated by a comma. The elements are the same types we just discussed (integer, float, string, boolean), and can be different from each other in the same list. 
 
 ```python
-atom_name = 'carbon'
-print(atom_name[0])
-print(atom_name[1])
-print(atom_name[2])
+lucky_items = ["rabbit's foot", "four-leaf clover", 42]
 ```
 
-Expected output:
+However, most of the time we use lists to store values that are related to each other so it's good practice to keep them as the same type.
 
-```text
-c
-a
-r
-```
+## 2.7 Accessing Elements Through Indices 
 
-You can access part of a string using a **slice**:
+Each element in a list has a position, called an **index**.
+
+In Python, counting starts at **0**, not 1. This means the first element is at index `0`, the second element is at index `1`, and so on.
 
 ```python
-atom_name = 'carbon'
-print(atom_name[1:3])
+countries = ["Canada", "Mexico", "United States", "Brazil"]
+
+countries[0]
 ```
 
-Expected output:
-
-```text
-ar
-```
-
-The slice `[1:3]` starts at index `1` and stops before index `3`.
-
-## 2.8 String length with `len()`
-
-Use `len()` to count the number of characters in a string.
+This gives us:
 
 ```python
-atom_name = 'carbon'
-print(len(atom_name))
+"Canada"
 ```
 
-Expected output:
+We can use a different index to get a different element:
 
-```text
-6
+```python
+countries[2]
 ```
 
-## 2.9 Practice: variables
+This gives us:
 
-### Exercise 1 — Create and print variables
+```python
+"United States"
+```
+
+Even though `"United States"` is the third item in the list, it has index `2` because Python starts counting at 0.
+
+### Negative Indexing
+
+Python can also count from the end of a list using **negative numbers**.
+
+```python
+countries[-1]
+```
+
+This gives us the last element:
+
+```python
+"Brazil"
+```
+
+We can also get the second-to-last element:
+
+```python
+countries[-2]
+```
+
+This gives us:
+
+```python
+"United States"
+```
+
+Negative indexing is useful when we want to access values at the end of a list without knowing exactly how long the list is.
+
+## 2.9 Adding and Removing Elements from a List
+
+After we create a list, we can change it by adding or removing elements.
+
+For these examples, let's continue with our list of countries:
+
+```python
+countries = ["Canada", "Mexico", "United States", "Brazil"]
+```
+
+### Adding an Element
+
+We can add a new element to the end of a list using `.append()`.
+
+```python
+countries.append("China")
+```
+
+Now the list contains five countries:
+
+
+```python
+["Canada", "Mexico", "United States", "Brazil", "China"]
+```
+
+Note that the `.append()` method changes the original list. It does not create a new list.
+
+### Removing an Element
+
+We can remove an element from a list using `.remove()`.
+
+```python
+countries.remove("Mexico")
+```
+
+Now the list no longer contains `"Mexico"`:
+
+```python
+countries
+```
+
+```python
+["Canada", "United States", "Brazil", "China"]
+```
+
+When using `.remove()`, we give Python the value that we want to remove. Notice that we didn't have to specify the location, but we can by using that element's index and `.pop()`. This would give the same result:
+
+```python
+countries.pop(1)
+```
+
+## 2.10 Operations on Lists Using Functions
+
+After we created our list, we often want to perform some calculation or modify the values somehow. Fortunately, we can easily do this with **functions**. These are the special commands we've been calling to do each operation. Here, we'll explore some available for lists, but a bigger list is available [here](https://docs.python.org/3.14/tutorial/datastructures.html).
+
+We will start with a list of life expectancy values:
+
+```python
+life_expectancies = [72.5, 80.1, 67.9, 75.4]
+```
+
+This list contains four numbers of the data type `float`. Each number is one element in the list.
+
+### Get Length of List Using `len()`
+
+We can use `len()` to count how many elements are in a list.
+
+```python
+len(life_expectancies)
+```
+
+This gives us:
+
+```python
+4
+```
+
+This list has four values.
+
+### Add Values Together Using `sum()`
+
+We can use `sum()` to add all of the values in a list.
+
+```python
+sum(life_expectancies)
+```
+
+This gives us:
+
+```python
+295.9
+```
+
+This is the total of all values in the list.
+
+
+### Find the Smallest and Largest Values 
+
+We can use `min()` to find the smallest value in a list.
+
+```python
+min(life_expectancies)
+```
+
+This gives us:
+
+```python
+67.9
+```
+
+The smallest life expectancy value in the list is `67.9`.
+
+Similarly, we can use `max()` to find the largest value in a list. 
+
+```python
+max(life_expectancies)
+```
+
+This gives us:
+
+```python
+80.1
+```
+
+This is the largest value in the list. 
+
+## 2.11 Additional Operations on Lists  
+
+Even if the function doesn't exist, we can easily perform the calculation by combining existing functions with another operation. For example, Python does not have a built-in `average()` function, but we can calculate an average using `sum()` and `len()`.
+
+```python
+average_life_expectancy = sum(life_expectancies) / len(life_expectancies)
+average_life_expectancy
+```
+
+This gives us:
+
+```python
+73.975
+```
+
+This calculation adds all values together and then divides by the number of values.
+
+
+### Modifying Each Value in a List Using `for` Loops
+
+Sometimes we want to do the same calculation to every value in a list or modify it in a particular way. If there isn't an existing function, we can perform this using a `for` loop, which loops through each element in our list and performs the same operation. 
+
+For example, we might print every element one at a time. To do this, we'll need to follow a basic syntax to setup our `for` loop. 
+
+First, we need a temporary variable to represent each element in our `for` loop. Because we can't perform the operation on the entire list, we'll need to call each element one at a time. Here, we call this temporary variable `value`, and specify that we want every element in our list using:
+
+```python
+for value in life_expectancies
+```
+
+Next, we need to perform the operation to every element. It uses the same structure as our other operations, but we have to indent the operation to specify that the operation is occuring within the for loop. We also add a colon to the first line. 
+
+```python
+for value in life_expectancies:
+    print("I will live", value, "years.")
+```
+
+This should print: 
+
+```python
+I will live 72.5 years.
+I will live 80.1 years.
+I will live 67.9 years.
+I will live 75.4 years.
+```
+
+Suppose we wanted to keep each of these print statements as another list. To do that, we'll need to create an empty list, and append each element to it. We'll also use the **f-string** to reference the value that variable is representing, and not just the variable itself. 
+
+```python
+life_expectancies_sentence = []
+
+for value in life_expectancies:
+    life_expectancies_sentence.append(f"I will live {value} years.")
+```
+
+If we looked out our new list:
+```
+life_expectancies_sentence
+```
+
+We would see it now contains our modified strings.
+
+```python
+['I will live 72.5 years.',
+ 'I will live 80.1 years.',
+ 'I will live 67.9 years.',
+ 'I will live 75.4 years.']
+```
+
+The original list did not change. We created a new list with the results.
+
+## 2.12 Practice: Variables
+
+*Woah, we covered a lot!* 
+
+Let's try a few exercises and see how well we do. 
+
+### Exercise 1 — Create and Print Variables
 
 Create variables for:
 
@@ -383,47 +628,24 @@ Create variables for:
 
 Then print a sentence using all three variables.
 
-```python
-# Write your code here
-```
+### Exercise 2 — Working with Lists
 
-### Exercise 2 — Predict before running
-
-What will this print?
+Given this list of country names:
 
 ```python
-initial = 'left'
-position = initial
-initial = 'right'
-print(position)
-```
-
-Write your prediction here:
-
-```text
-Prediction:
-```
-
-### Exercise 3 — Slicing
-
-Given this string:
-
-```python
-species_name = 'Acacia buxifolia'
+countries = ["Canada", "Mexico", "United States", "Brazil"]
 ```
 
 Predict the result of each expression:
 
 ```python
-species_name[2:8]
-species_name[11:]
-species_name[:4]
-species_name[:]
-species_name[11:-3]
-species_name[-5:-3]
+countries[0]
+countries[2]
+countries[-1]
+countries[0:2]
+countries[2:]
+countries[:]
 ```
-
-Then run the code to check your answers.
 
 ---
 
@@ -455,7 +677,25 @@ For Gapminder GDP data:
 - each row is a country
 - each column is GDP per capita for a particular year
 
-## 3.3 Read a CSV file
+## 3.3 Discrete and Continuous Data
+
+When we work with data, it is helpful to think about what kind of information each column contains.
+
+**Discrete data** are values that represent separate categories or countable groups. In the Gapminder dataset, `country` is discrete because each value is a separate country name, such as `Albania` or `Denmark`. The `continent` column in `gapminder_all.csv` is also discrete because each value belongs to a category, such as `Europe`, `Asia`, or `Americas`.
+
+**Continuous data** are numeric values that can be measured on a scale. In the Gapminder dataset, columns such as `gdpPercap_1952` or `gdpPercap_2007` are continuous because GDP per capita can take many possible numeric values, including values with decimals.
+
+A simple way to remember the difference is:
+
+| Data type | Meaning | Gapminder example |
+|---|---|---|
+| Discrete | Separate categories or countable values | `country`, `continent` |
+| Continuous | Measured numeric values | `gdpPercap_1952`, `gdpPercap_2007` |
+
+This distinction matters because we often summarize and plot discrete and continuous data in different ways.
+
+
+## 3.4 Read a CSV File
 
 Read the Oceania GDP data:
 
@@ -471,7 +711,7 @@ print(data_oceania)
 
 This creates a DataFrame variable named `data_oceania`.
 
-## 3.4 File paths and common errors
+## 3.5 File Paths and Common Errors
 
 The path:
 
@@ -500,9 +740,9 @@ print(os.listdir())
 print(os.listdir('data'))
 ```
 
-## 3.5 Use `index_col` for row labels
+## 3.6 Use `index_col` for Row Labels
 
-By default, Pandas gives rows numeric labels: `0`, `1`, `2`, and so on. For Gapminder data, it is often more useful to use the `country` column as the row index.
+By default, Pandas gives rows numeric labels: `0`, `1`, `2`, and so on. For this data, it is more useful to use the `country` column as the row index.
 
 ```python
 data_oceania_country = pd.read_csv(
@@ -515,7 +755,7 @@ print(data_oceania_country)
 
 Now the country names are row labels instead of regular values in a column.
 
-## 3.6 Inspect a DataFrame with `.info()`
+## 3.7 Inspect a DataFrame with `.info()`
 
 Use `.info()` to summarize the structure of a DataFrame.
 
@@ -533,7 +773,7 @@ This tells you:
 - the data type of each column
 - memory usage
 
-## 3.7 Inspect column names with `.columns`
+## 3.8 Inspect Column Names with `.columns`
 
 The `.columns` attribute stores the column labels.
 
@@ -541,7 +781,7 @@ The `.columns` attribute stores the column labels.
 print(data_oceania_country.columns)
 ```
 
-Notice that `.columns` does **not** use parentheses. It is an attribute, not a method.
+Notice that `.columns` does **not** use parentheses. It is an attribute, not a function.
 
 Compare:
 
@@ -549,23 +789,13 @@ Compare:
 # Attribute: no parentheses
 print(data_oceania_country.columns)
 
-# Method: uses parentheses
+# Function: uses parentheses
 print(data_oceania_country.describe())
 ```
 
-## 3.8 Transpose a DataFrame with `.T`
+## 3.9 Summary Statistics with `.describe()`
 
-Transposing flips rows and columns.
-
-```python
-print(data_oceania_country.T)
-```
-
-This can be useful when years are currently stored as columns but you want to view them as rows.
-
-## 3.9 Summary statistics with `.describe()`
-
-Use `.describe()` to calculate summary statistics for numerical columns.
+Use `.describe()` to calculate summary statistics for numerical columns. Notice that it handles which the different data types automatically. Neat!
 
 ```python
 data_oceania_country.describe()
@@ -580,7 +810,7 @@ This reports values such as:
 - quartiles
 - maximum
 
-## 3.10 Preview rows with `.head()` and `.tail()`
+## 3.10 Preview Rows with `.head()` and `.tail()`
 
 Read the Americas dataset:
 
@@ -609,7 +839,7 @@ Show the last three rows:
 data_americas.tail(n=3)
 ```
 
-## 3.11 Writing a DataFrame to a CSV file
+## 3.11 Writing a DataFrame to a CSV File
 
 Use `.to_csv()` to save a DataFrame.
 
@@ -619,17 +849,13 @@ data_americas.to_csv('processed_americas.csv')
 
 This writes the file to the directory where your notebook session is running.
 
-## 3.12 Practice: reading data
+## 3.12 Practice: Reading Data
 
-### Exercise 4 — Read Europe data
+### Exercise 3 — Read Europe Data
 
 Read the Europe Gapminder GDP data and use `country` as the row index.
 
-```python
-# Write your code here
-```
-
-### Exercise 5 — Inspect the DataFrame
+### Exercise 4 — Inspect the DataFrame
 
 Use commands to answer:
 
@@ -638,15 +864,11 @@ Use commands to answer:
 3. What are the column names?
 4. What data type is stored in the GDP columns?
 
-```python
-# Write your code here
-```
-
 ---
 
 # Part 4 — Working with Pandas DataFrames
 
-## 4.1 Load the Europe dataset
+## 4.1 Load the Europe Dataset
 
 ```python
 import pandas as pd
@@ -660,7 +882,7 @@ Use `.head()` to confirm that the file loaded correctly:
 data.head()
 ```
 
-## 4.2 Select by position with `.iloc`
+## 4.2 Select By Position with `.iloc`
 
 Use `.iloc` when you want to select by integer position.
 
@@ -685,7 +907,7 @@ print(data.loc['Albania', 'gdpPercap_1952'])
 
 This selects the value for Albania in 1952.
 
-## 4.4 Select an entire row
+## 4.4 Select an Entire Row
 
 Use `:` to mean “everything” along an axis.
 
@@ -701,7 +923,7 @@ The shorter version also works:
 print(data.loc['Albania'])
 ```
 
-## 4.5 Select an entire column
+## 4.5 Select an Entire Column
 
 ```python
 print(data.loc[:, 'gdpPercap_1952'])
@@ -715,7 +937,7 @@ A common shortcut for selecting a single column is:
 print(data['gdpPercap_1952'])
 ```
 
-## 4.6 Select ranges of rows and columns
+## 4.6 Select Ranges of Rows and Columns
 
 Select rows from Italy through Poland and columns from 1962 through 1972:
 
@@ -724,7 +946,7 @@ subset = data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972']
 print(subset)
 ```
 
-Important distinction:
+**Warning:** There's an important distinction:
 
 | Selection method | Slice behavior |
 |---|---|
@@ -747,7 +969,7 @@ print(data.loc['Albania':'Belgium', 'gdpPercap_1952':'gdpPercap_1962'])
 
 includes `Belgium` and `gdpPercap_1962` because `.loc` includes the ending labels.
 
-## 4.7 Calculate statistics on a subset
+## 4.7 Calculate Statistics on a Subset
 
 Once you select a subset, you can analyze it.
 
@@ -761,7 +983,7 @@ print(subset.mean())
 
 These calculations are applied column by column.
 
-## 4.8 Use comparisons to create Boolean masks
+## 4.8 Use Comparisons to Create Boolean Masks
 
 A comparison such as `subset > 10000` is applied to every value in the DataFrame.
 
@@ -773,7 +995,7 @@ print(subset > 10000)
 
 This returns a DataFrame of `True` and `False` values.
 
-## 4.9 Use a Boolean mask to filter values
+## 4.9 Use a Boolean Mask to Filter Values
 
 You can use the Boolean DataFrame as a mask.
 
@@ -788,7 +1010,7 @@ Values that meet the condition are kept. Values that do not meet the condition b
 high_gdp.describe()
 ```
 
-## 4.10 Filter rows using a column value
+## 4.10 Filter Rows Using a Column Value
 
 Load the combined Gapminder dataset:
 
@@ -815,7 +1037,7 @@ americas.head()
 
 This is often easier for learners to understand because the Boolean condition is stored in a named variable.
 
-## 4.11 Drop rows or columns
+## 4.11 Drop Rows or Columns
 
 Drop a row by label:
 
@@ -831,89 +1053,45 @@ americas_gdp_only = americas_without_puerto_rico.drop('continent', axis=1)
 
 Use `axis=1` when dropping a column. Rows are the default axis.
 
-## 4.12 Save results
+## 4.12 Save Results
+
+Just like before, we'll save this dataframe as a CSV in our local directory. 
 
 ```python
 americas_gdp_only.to_csv('americas_gdp_only.csv')
 ```
 
-## 4.13 Practice: DataFrame selection
+## 4.13 Practice: DataFrame Selection
 
-### Exercise 6 — Individual value
+### Exercise 5 — Individual Value
 
 Find the GDP per capita of Serbia in 2007.
 
-```python
-# Write your code here
-```
-
-### Exercise 7 — Column selection
+### Exercise 6 — Column Selection
 
 Select GDP per capita for all European countries in 1982.
 
-```python
-# Write your code here
-```
-
-### Exercise 8 — Row selection
+### Exercise 7 — Row Selection
 
 Select GDP per capita for Denmark for all years.
 
-```python
-# Write your code here
-```
-
-### Exercise 9 — Range selection
+### Exercise 8 — Range Selection
 
 Select GDP per capita for all countries for years after 1985.
 
-```python
-# Write your code here
-```
-
-### Exercise 10 — Growth ratio
+### Exercise 9 — Growth Ratio
 
 Calculate GDP per capita in 2007 divided by GDP per capita in 1952 for each European country.
 
-```python
-# Write your code here
-```
-
-### Exercise 11 — Boolean filtering
+### Exercise 10 — Boolean Filtering
 
 Create a subset of European countries where GDP per capita in 2007 is greater than 30,000.
 
-```python
-# Write your code here
-```
-
 ---
 
-# Part 5 — Suggested instructor flow
+# Part 5 — Resources
 
-## 5.1 Timing
-
-Suggested pacing for a short workshop segment:
-
-| Section | Topic | Approx. time |
-|---|---|---:|
-| Part 1 | JupyterLab and notebooks | 15 min |
-| Part 2 | Variables and assignment | 20 min |
-| Part 3 | Reading CSV files into DataFrames | 20 min |
-| Part 4 | Selecting and filtering DataFrames | 30 min |
-| Practice | Exercises and discussion | 20–30 min |
-
-## 5.2 Teaching notes
-
-- Start by distinguishing **code cells** from **Markdown cells**.
-- Emphasize that notebooks run in execution order, not visual order.
-- Have learners predict outputs before running code.
-- Use meaningful variable names from the start.
-- When introducing DataFrames, connect rows and columns to familiar spreadsheets.
-- Explain `.loc` as “label-based selection” and `.iloc` as “integer-position selection.”
-- Pause on Boolean masks; many learners need extra time to understand that a condition can produce a table of `True`/`False` values.
-
-## 5.3 Common learner errors
+## Common Errors
 
 | Error | Likely cause | Fix |
 |---|---|---|
@@ -925,9 +1103,9 @@ Suggested pacing for a short workshop segment:
 
 ---
 
-# Part 6 — Answer key
+# Part 6 — Answer Key
 
-## Exercise 1 example
+## Exercise 1 Example
 
 ```python
 first_name = 'Cassie'
@@ -937,37 +1115,37 @@ sample_count = 12
 print(first_name, 'is analyzing', sample_count, 'samples of', favorite_organism)
 ```
 
-## Exercise 2 answer
-
-```python
-initial = 'left'
-position = initial
-initial = 'right'
-print(position)
-```
-
-Output:
+Expected output:
 
 ```text
-left
+Cassie is analyzing 12 samples of Ralstonia solanacearum
 ```
 
-`position` keeps the value assigned to it. Changing `initial` later does not automatically update `position`.
-
-## Exercise 3 answers
+## Exercise 2 Answer
 
 ```python
-species_name = 'Acacia buxifolia'
+countries = ["Canada", "Mexico", "United States", "Brazil"]
 
-print(species_name[2:8])    # acia b
-print(species_name[11:])    # folia
-print(species_name[:4])     # Acac
-print(species_name[:])      # Acacia buxifolia
-print(species_name[11:-3])  # fo
-print(species_name[-5:-3])  # fo
+print(countries[0])
+print(countries[2])
+print(countries[-1])
+print(countries[0:2])
+print(countries[2:])
+print(countries[:])
 ```
 
-## Exercise 4 answer
+Expected output:
+
+```python
+Canada
+United States
+Brazil
+['Canada', 'Mexico']
+['United States', 'Brazil']
+['Canada', 'Mexico', 'United States', 'Brazil']
+```
+
+## Exercise 3 Answer
 
 ```python
 import pandas as pd
@@ -976,7 +1154,7 @@ data_europe = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 data_europe.head()
 ```
 
-## Exercise 5 answer
+## Exercise 4 Answer
 
 ```python
 data_europe.info()
@@ -985,39 +1163,39 @@ print(data_europe.shape)
 print(data_europe.dtypes)
 ```
 
-## Exercise 6 answer
+## Exercise 5 Answer
 
 ```python
 print(data_europe.loc['Serbia', 'gdpPercap_2007'])
 ```
 
-## Exercise 7 answer
+## Exercise 6 Answer
 
 ```python
 data_europe['gdpPercap_1982']
 ```
 
-## Exercise 8 answer
+## Exercise 7 Answer
 
 ```python
 data_europe.loc['Denmark', :]
 ```
 
-## Exercise 9 answer
+## Exercise 8 Answer
 
 ```python
 data_europe.loc[:, 'gdpPercap_1987':]
 ```
 
-Note: the Carpentries lesson uses `'gdpPercap_1985':` as a flexible slice starting point even though no exact 1985 column exists. Because the dataset has 5-year intervals, using `'gdpPercap_1987':` is more explicit for “after 1985.”
+Note: the dataset uses 5-year intervals. Because there is no exact `gdpPercap_1985` column, `gdpPercap_1987` is the first available column after 1985.
 
-## Exercise 10 answer
+## Exercise 9 Answer
 
 ```python
 data_europe['gdpPercap_2007'] / data_europe['gdpPercap_1952']
 ```
 
-## Exercise 11 answer
+## Exercise 10 Answer
 
 ```python
 high_2007 = data_europe[data_europe['gdpPercap_2007'] > 30000]
