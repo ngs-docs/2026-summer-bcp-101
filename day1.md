@@ -22,11 +22,30 @@ participating in this workshop!
 
 ## Structure & schedule
 
+Each day, Monday-Thursday, sessions will go from 10am-noon and 1-3pm.
+
+Monday will cover introductory material and the basic technology platform
+we are showing you.
+
+Tuesday will go through the basics of programming in Python, plotting,
+and some statistics.
+
+Wednesday will broaden this from specific skills to general setup.
+
+On Thursday, we will engage with individual and group plans.
+
 ## Expectations
+
+CTB: max expectations.
 
 Show up; participate; engage!
 
+Think about what you want out of this workshop and communicate it to us,
+especially if and as it changes :).
+
 ## Technology
+
+CTB: cassie presentation.
 
 Over the next three days, we're going to be introducing you to a
 particular set of data science technology. The tech we're using was
@@ -56,7 +75,18 @@ we will use to create, edit, and customize collections of files, and
 Markdown is a widely used way of formatting text for display that is
 supported by GitHub and JupyterLab as well as many others.
 
+These are all tools and approaches that we and millions of other people use
+on a daily basis! We can show you how to begin using them, and there is
+no real stopping point for them - they are fully powered and "deep". However,
+that also means that they are not necessarily easy to use and configure!
+
+Important things to mention:
+* The only account or signup needed is GitHub, which is free to create.
+* The main drawbacks of Jupyterlite are: limited by local compute; can't install many things; R is limited.
+
 ## Demo
+
+CTB: max will teach..
 
 Demo/overview of next two days to show you how all of these buzzwords
 work together.
@@ -67,10 +97,11 @@ give a more thorough introduction. On Wednesday we'll talk about how it
 works underneath and where some of the challenges lie, and then show you
 the approaches needed to build your own customized site.
 
-- start up jupyterlite from a customized site
-- load in data set from spreadsheet
-- plot relationships present in data set
-- provide a faded example of some kind
+<!-- source code: https://github.com/ngs-docs/2026-summer-bcp-101-jupyterlite-demo -->
+
+Click on this link: [ngs-docs.github.io/2026-summer-bcp-101-jupyterlite-demo/](https://ngs-docs.github.io/2026-summer-bcp-101-jupyterlite-demo/)
+
+Then open quick-demo.ipynb
 
 # Hands-on introduction to technology
 
@@ -86,13 +117,14 @@ Points:
 
 To get started, go to this Web page:
 
-[ngs-docs/2026-summer-bcp101-jupyterlite](https://github.com/ngs-docs/2026-summer-bcp-101-jupyterlite)
+<!-- source code: https://github.com/ngs-docs/2026-summer-bcp-101-jupyterlite-demo2 -->
+
+[github.com/ngs-docs/2026-summer-bcp-101-jupyterlite-demo2/](https://ngs-docs.github.io/2026-summer-bcp-101-jupyterlite-demo2/)
 
 This is a custom site that we built for you. On Wed, we'll show you how
 to build one for yourself.
 
 CTB TODO:
-- replace jupylite site above with custom site
 - put in some screenshots of the JupyterLite interface
 
 ### Exporing JupyterLite
@@ -118,11 +150,29 @@ print('hello, world')
 
 More on this tomorrow.
 
+The last value calculated will be displayed; try executing:
+```
+5+5
+2+2
+```
+and see what is printed.
+
+You can do:
+```
+print(5+5)
+print(2+2)
+```
+if you want to see intermediate values printed.
+
 ### Manipulating notebook contents
 
 You can curate your notebook cells.
 
 * Edit, move, delete
+
+### Prestaging notebooks
+
+Click on the "markdown-examples.ipynb" file. This is a pre-existing notebook that we wrote for you. It's an example of a "pre-staged" notebook that can be prepared ahead of time and placed in the JupyterLite site.
 
 ### Writing text and explanations in Markdown
 
@@ -152,7 +202,7 @@ CTB Maybe save for Wed:
 
 ### CTB maybe to cover:
 
-* Teaching strategies
+* Teaching strategies (look at instructor training notes!)
     * questions and answers
     * pre-staged data
     * faded examples
