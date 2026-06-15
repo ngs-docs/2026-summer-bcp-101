@@ -308,9 +308,9 @@ Help menu.
 If we update the site itself, then that is harder to deal with; you'll need to
 delete all the site data.  (Demo in Firefox!)
 
-We suggest use incognito mode to test new site.
+We suggest use incognito mode to test a new site out!
 
-You can also "just" create a new site. We'll show you that :).
+You can also "just" create a new site. We'll show you that on Wed :).
 
 <!-- 
 CTB Maybe save for Wed:
