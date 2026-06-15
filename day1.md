@@ -54,8 +54,7 @@ We will spend time developing individual or group project ideas using the tools 
 TL;DR: Show up; participate; engage!
 
 ## Technology
-
-![Overview](https://hackmd.io/_uploads/ry-1AepbGl.jpg)
+<img width="4000" height="2250" alt="Overview" src="https://github.com/user-attachments/assets/8cfc0956-a26a-44d7-a4b9-26596c34a670" />
 
 Over the next three days, we're going to be introducing you to a
 particular set of data science technology. It can be difficult to see how they relate to each other, so please refer to this overview for key terms and relationships. However, here's a brief summary:
