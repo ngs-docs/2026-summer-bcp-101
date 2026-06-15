@@ -50,10 +50,10 @@ especially if and as it changes :).
 
 ## Technology
 
-CTB: cassie presentation.
-
 Over the next three days, we're going to be introducing you to a
-particular set of data science technology. The technology we're using was
+particular set of data science technology. It can be difficult to see how they relate to each other, so please refer to this presentation for key terms and relationships. However, here's a brief summary:
+
+The technology we're using was
 chosen based on our own experiences as well as our workshop last year;
 in particular, it is not only free, but works on essentially any
 computer with a modern Web browser and a keyboard - including Google
@@ -75,7 +75,7 @@ throughout!)
 
 Last but not least, the other star players in our technology line up
 will be [GitHub](https://github.com/) and
-[Markdown](https://www.markdownguide.org/]). GitHub is a Web site that
+[Markdown](https://www.markdownguide.org/]). GitHub is a Website that
 we will use to create, edit, and customize collections of files, and
 Markdown is a widely used way of formatting text for display that is
 supported by GitHub and JupyterLab as well as many others.
@@ -93,10 +93,10 @@ Important things to mention:
 
 CTB: max will teach..
 
-Demo/overview of next two days to show you how all of these buzzwords
+Let's see an overview of what we'll cover during the next two days to show you how all of these buzzwords
 work together.
 
-After lunch we will lead you through all of this so you can get a
+After lunch, we will lead you through all of this so you can get a
 top-down view of how it all fits together, and then tomorrow we will
 give a more thorough introduction. On Wednesday we'll talk about how it
 works underneath and where some of the challenges lie, and then show you
@@ -108,7 +108,7 @@ Click on this link: [ngs-docs.github.io/2026-summer-bcp-101-jupyterlite-demo/](h
 
 Then open quick-demo.ipynb
 
-# Hands-on introduction to technology
+# Hands-On Introduction to Technology
 
 ## JupyterLite
 
@@ -138,7 +138,7 @@ You can browse files.
 
 You can launch new notebooks.
 
-### Python notebooks
+### Python Notebooks
 
 Start a Python notebook.
 
@@ -169,17 +169,17 @@ print(2+2)
 ```
 if you want to see intermediate values printed.
 
-### Manipulating notebook contents
+### Manipulating Notebook Contents
 
 You can curate your notebook cells.
 
 * Edit, move, delete
 
-### Prestaging notebooks
+### Pre-Staging Notebooks
 
 Click on the "markdown-examples.ipynb" file. This is a pre-existing notebook that we wrote for you. It's an example of a "pre-staged" notebook that can be prepared ahead of time and placed in the JupyterLite site.
 
-### Writing text and explanations in Markdown
+### Writing Text and Explanations in Markdown
 
 Basic formatting.
 
@@ -187,7 +187,7 @@ Math formatting.
 
 Images.
 
-### Storing, downloading, and uploading notebooks and figures.
+### Storing, Downloading, and Uploading Notebooks and Figures
 
 Persistence.
 
@@ -195,7 +195,7 @@ Download.
 
 Upload.
 
-### JupyterLite gotchas.
+### JupyterLite Gotchas.
 
 Caching.
 
