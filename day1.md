@@ -50,6 +50,9 @@ We will spend time developing individual or group project ideas using the tools 
     * As we cover material, your desired outcomes may very well shift. Letting us know will help us get you to those new goals!
 4. A little patience goes a long way :)
     * Working with technology can be tedious and frustrating at times, but our goal is to walk everyone through this workshop as smoothly as possible. When problems arise, know that we will both do our best to walk you through any roadblocks, as well as try to give you the knowledge to troubleshoot independently.
+    
+We've intentionally left lots of time for questions and collaborative
+exploration, so please ask questions as you have them!
 
 TL;DR: Show up; participate; engage!
 
