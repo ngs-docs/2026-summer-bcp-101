@@ -55,8 +55,26 @@ TL;DR: Show up; participate; engage!
 
 ## Technology
 
+![Overview](https://hackmd.io/_uploads/ry-1AepbGl.jpg)
+
 Over the next three days, we're going to be introducing you to a
-particular set of data science technology. It can be difficult to see how they relate to each other, so please refer to this presentation for key terms and relationships. However, here's a brief summary:
+particular set of data science technology. It can be difficult to see how they relate to each other, so please refer to this overview for key terms and relationships. However, here's a brief summary:
+
+**JupyterLite:** A version of Jupyter that runs in a web browser. It lets you use notebooks without installing software on your computer.
+
+**Jupyter notebook:** An interactive document where you can write code, add notes, and see results like tables or plots.
+
+**GitHub:** A website for storing, organizing, editing, and sharing files, especially code and project materials.
+
+**Markdown:** A simple way to format text using plain characters. For example, Markdown can be used to make headings, lists, links, and bold text.
+
+**Python:** A programming language that is commonly used for data science. We will use Python to write instructions that the computer can follow.
+
+**Library:** An add-on tool that gives Python extra abilities. 
+
+**Pandas:** A Python library used to work with data tables. It helps you load, view, filter, organize, and summarize data.
+
+**matplotlib:** A Python library used to make plots and graphs from data.
 
 The technology we're using was
 chosen based on our own experiences as well as our workshop last year;
