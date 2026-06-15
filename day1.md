@@ -49,7 +49,7 @@ We will spend time developing individual or group project ideas using the tools 
     * All of us are probably wanting different takeaways from this workshop, and as such, are anticipating to engage with the material in different ways. This is all perfectly fine, all that we ask is that you be involved however you feel will best suit your goals!
     * As we cover material, your desired outcomes may very well shift. Letting us know will help us get you to those new goals!
 4. A little patience goes a long way :)
-    * Wokring with technology can be tedious and frustrating at times, but our goal is to walk everyone through this workshop as smoothly as possible. When problems arise, know that we will both do our best to walk you through any roadblocks, as well as try to give you the knowledge to troubleshoot independently.
+    * Working with technology can be tedious and frustrating at times, but our goal is to walk everyone through this workshop as smoothly as possible. When problems arise, know that we will both do our best to walk you through any roadblocks, as well as try to give you the knowledge to troubleshoot independently.
 
 TL;DR: Show up; participate; engage!
 
@@ -109,7 +109,7 @@ that also means that they are not necessarily easy to use and configure!
 
 Important things to mention:
 * The only account or signup needed is GitHub, which is free to create.
-* The main drawbacks of Jupyterlite are: limited by local compute; can't install many things; R is limited.
+* The main drawbacks of JupyterLite are: limited by local compute; can't install many things; R is limited.
 
 ## Demo
 
@@ -126,7 +126,7 @@ the approaches needed to build your own customized site.
 
 Click on this link: [ngs-docs.github.io/2026-summer-bcp-101-jupyterlite-demo/](https://ngs-docs.github.io/2026-summer-bcp-101-jupyterlite-demo/)
 
-Then open quick-demo.ipynb
+Then open `quick-demo.ipynb`.
 
 # Hands-On Introduction to Technology
 
@@ -149,10 +149,11 @@ To get started, go to this Web page:
 This is a custom site that we built for you. On Wed, we'll show you how
 to build one for yourself.
 
-CTB TODO:
+<!-- CTB TODO:
 - put in some screenshots of the JupyterLite interface
+-->
 
-### Exporing JupyterLite
+### Exploring JupyterLite
 
 You can browse files.
 
@@ -197,7 +198,10 @@ You can curate your notebook cells.
 
 ### Pre-Staging Notebooks
 
-Click on the "markdown-examples.ipynb" file. This is a pre-existing notebook that we wrote for you. It's an example of a "pre-staged" notebook that can be prepared ahead of time and placed in the JupyterLite site.
+Click on the `markdown-examples.ipynb` file. This is a pre-existing
+notebook that we wrote for you. It's an example of a "pre-staged"
+notebook that can be prepared ahead of time and placed in the
+JupyterLite site.
 
 ### Writing Text and Explanations in Markdown
 
@@ -221,6 +225,7 @@ Caching.
 
 Where are files located.
 
+<!-- 
 CTB Maybe save for Wed:
 
 * github, Browser local, clearing cache (chrome, firefox, safari, ??), incognito, updating files how and when
@@ -236,3 +241,4 @@ CTB Maybe save for Wed:
     * downloading and uploading files/figures
     * printing and/or saving
     * saving/clearing data etc.
+-->
