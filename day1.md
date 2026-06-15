@@ -23,8 +23,11 @@ participating in this workshop!
 ## Structure & Schedule
 
 Dates: Monday, June 15, to Thursday, June 18
+
 Morning Session: 10:00 AM - 12:00 PM (PST)
+
 Lunch: 12:00 PM - 1:00 PM (PST)
+
 Afternoon Session: 1:00 PM - 3:00 PM (PST)
 
 **Monday: Introductory material and the basic technology platform we are showing you.**
