@@ -158,7 +158,7 @@ To get started, go to this Web page:
 
 <!-- source code: https://github.com/ngs-docs/2026-summer-bcp-101-jupyterlite-demo2 -->
 
-[github.com/ngs-docs/2026-summer-bcp-101-jupyterlite-demo2/](https://ngs-docs.github.io/2026-summer-bcp-101-jupyterlite-demo2/)
+[ngs-docs.github.io/2026-summer-bcp-101-jupyterlite-demo2/](https://ngs-docs.github.io/2026-summer-bcp-101-jupyterlite-demo2/)
 
 This is a custom site that we built for you. On Wed, we'll show you how
 to build one for yourself.
@@ -171,9 +171,17 @@ You can browse files.
 
 You can launch new notebooks.
 
+You can launch multiple new notebooks! They will work independently of each
+other.
+
+You can't collaboratively work on the same notebook on different computers,
+I'm afraid. (There are many reasons for this.)
+
 ### Python Notebooks
 
 Start a Python notebook.
+
+Click the little disk icon to save (or File... Save.) Give it a name.
 
 **You can run Python code:** enter the following in a cell of your
 notebook and click the "play" button to run it.
@@ -182,7 +190,9 @@ notebook and click the "play" button to run it.
 print('hello, world')
 ```
 
-* you can do basic math
+In these code cells,
+
+* you can do basic math!
 * you can load spreadsheets
 * you can create plots and figures
 
@@ -207,6 +217,40 @@ if you want to see intermediate values printed.
 You can curate your notebook cells.
 
 * Edit, move, delete
+* Copy, paste cells
+
+### Keyboard shortcuts
+
+Shift-ENTER is about the only one of these I usually use, but there are a lot
+of useful ones.
+
+### Running cells out of order
+
+You can run cells out of order - for example,
+```
+a = 1
+```
+then
+```
+print(a * 2)
+```
+will give you 2.
+
+If you add a new cell with
+```
+a = 3
+```
+(which overwrites the value of `a`) and then go run just the
+`print` cell, you will see the number 6, even though if you just read
+through the notebook from top to bottom that would be confusing.
+
+If you go to Run... Run all cells... you will get the right answer, tho!
+
+You can also click the fast forward, which will reload and re-run everything.
+We can talk more about this on Wed!
+
+Generally, we strongly suggest writing the notebooks to be run in
+order, and rerunning it from scratch regularly.
 
 ### Pre-Staging Notebooks
 
@@ -223,27 +267,50 @@ You can create text cells in notebooks that support Markdown formatting.
 * Math formatting.
 * Images.
 
-Open the `markdown-examples.ipynb` and run it.
+Open the `markdown-examples.ipynb` and run it. Let's go through these
+examples!
 
 ### Storing, Downloading, and Uploading Notebooks and Figures
 
-Persistence.
+These sites are persistent, and stored locally after download -
+including with any and all of your changes! So you can close the site,
+and open it again later, and all the contents will still be there.
+(Unless you use incognito mode in your browser, which doesn't save
+anything.)
 
-Download.
+You can download notebooks and files, and also upload them. They will
+stay there until you use "Clear cache" (under the Help menu).
 
-Upload.
+### Installing new packages
+
+Try putting:
+```
+%pip install matplotlib_venn
+```
+in one cell, and running it. This will find, download, and install the
+[matplotlib_venn]() package.
+
+Then, in another cell, run:
+```python
+from matplotlib_venn import venn2
+venn2(subsets = (3, 2, 1))
+```
+
+to use the new package.
 
 ### JupyterLite Gotchas.
 
-Caching.
+Caching. Note that each new _site_ starts fresh! (Based on the Web site address.)
 
-Where are files located.
+You can clearing your own changes with the "clear cache" button under
+Help menu.
 
-Clearing changes.
+If we update the site itself, then that is harder to deal with; you'll need to
+delete all the site data.  (Demo in Firefox!)
 
-Reloading the site.
+We suggest use incognito mode to test new site.
 
-Using incognito mode to test the site.
+You can also "just" create a new site. We'll show you that :).
 
 <!-- 
 CTB Maybe save for Wed:
