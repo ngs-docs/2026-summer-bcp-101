@@ -161,6 +161,8 @@ to build one for yourself.
 - put in some screenshots of the JupyterLite interface
 -->
 
+<img width="1778" height="822" alt="Screenshot 2026-06-15 at 9 32 18 AM" src="https://github.com/user-attachments/assets/213cb5de-70d9-4bf5-9a8e-b609d3b7d705" />
+
 ### Exploring JupyterLite
 
 You can browse files.
