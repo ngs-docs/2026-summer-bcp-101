@@ -41,12 +41,17 @@ We will spend time developing individual or group project ideas using the tools 
 
 ## Expectations
 
-CTB: max expectations.
+1. Be present and engaged
+    *  There won't be much in the way of assignments or exercises for you guys to go through on your own time, but we would appreciate if everyone could join on time and ready to follow along!
+2. Foster a respectful environment
+    * We're all coming into this with different experiences and expectations, clear and respectful communication goes a long way! 
+3. Contribute and engage in a manner and extent which fits your desired outcomes
+    * All of us are probably wanting different takeaways from this workshop, and as such, are anticipating to engage with the material in different ways. This is all perfectly fine, all that we ask is that you be involved however you feel will best suit your goals!
+    * As we cover material, your desired outcomes may very well shift. Letting us know will help us get you to those new goals!
+4. A little patience goes a long way :)
+    * Wokring with technology can be tedious and frustrating at times, but our goal is to walk everyone through this workshop as smoothly as possible. When problems arise, know that we will both do our best to walk you through any roadblocks, as well as try to give you the knowledge to troubleshoot independently.
 
-Show up; participate; engage!
-
-Think about what you want out of this workshop and communicate it to us,
-especially if and as it changes :).
+TL;DR: Show up; participate; engage!
 
 ## Technology
 
@@ -90,8 +95,6 @@ Important things to mention:
 * The main drawbacks of Jupyterlite are: limited by local compute; can't install many things; R is limited.
 
 ## Demo
-
-CTB: max will teach..
 
 Let's see an overview of what we'll cover during the next two days to show you how all of these buzzwords
 work together.

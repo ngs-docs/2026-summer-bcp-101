@@ -8,6 +8,19 @@ nav_order: 4
 
 Once we've got data ready, we can visualize data in a variety of different ways. Here, we'll walk through some of the utility available through the `matplotlib` library and it's sublibrary `pyplot`.
 
+## Content
+- [Part 1: The basics of `matplotlib`](#the-basics-of-matplotlib)
+- [Part 2: Plotting from lists](#part-2-plotting-from-lists)
+    - [2.1 Line graphs](#21-working-with-paired-continuous-datasets-line-graphs)
+    - [2.2 Scatterplots](#22-working-with-paired-continuous-datasets-scatterplots)
+    - [2.3 Bar graphs](#23-working-with-combined-discrete-and-continuous-data-bar-graphs)
+    - [2.4 Boxplots](#24-working-with-combined-discrete-and-continuous-data-boxplots)
+- [Part 3: Plotting from dataframes](#part-3-plotting-from-a-pandas-dataframe)
+    - [3.1 Line plots](#31-line-plots-for-trends-within-rows-across-columns)
+    - [3.2 Scatterplots](#32-scatter-plots-for-relationships-between-columns)
+    - [3.3 Boxplots](#33-boxplots-to-compare-across-discrete-variables)
+- [Part 4: Exercise answers](#part-4-exercise-answers)
+
 ## The basics of `matplotlib`
 Plotting in `matplotlib` is oriented around plot objects which have specific layers/components. We generate an initial plot by using the `.plot()` function. Once we have generated a plot, we can modify the components using functions which update the plot currently in the environment. 
 
@@ -21,9 +34,9 @@ Today, we'll walk through generating some basic plot types, as well as some exam
 
 If you would like to learn more, extensive [documentation](https://matplotlib.org/stable/users/index.html) is available!
 
-## Part 1: Plotting from lists
+## Part 2: Plotting from lists
 
-### 1.1 Working with paired continuous datasets: line graphs
+### 2.1 Working with paired continuous datasets: line graphs
 When dealing with datasets which contain strictly continuous variables (e.g. can be represented on a scale), we'll typically visualize it using either line plots or scatter plots. Let's walk through how we can generate these.
 
 Our first step is to load in the `matplotlib` library. Note that we assign the library the alias `plt`, and so we'll preceed any functions that we call from the 'matplotlib' library with this alias instead. 
@@ -83,7 +96,7 @@ plt.legend() # add legend
 ```
 ![fig3](https://hackmd.io/_uploads/HJkV50wZfe.png)
 
-### 1.2 Working with paired continuous datasets: scatterplots
+### 2.2 Working with paired continuous datasets: scatterplots
 
 Line graphs connected all the paired data. If we wanted to plot points themselves, we would use a scatterplot. To do this, we can simply replace the `.plot()` function with the `.scatter()` function. 
 
@@ -99,8 +112,7 @@ plt.legend() # add legend
 ```
 ![fig4](https://hackmd.io/_uploads/BkBEbJu-fx.png)
 
-:::success
-**Exercise 12**
+### Exercise 12
 When trying to generate a line graph, the code below produces an error following the `.plot()` call. What is the most likely source of the error?
 
 ```python
@@ -111,11 +123,8 @@ speciesCount = [3, 18, 31, 38, 43, 44, 45]
 #scatterplot
 plt.scatter(area, speciesCount)
 ```
-:::spoiler Answer
-The lists associated with X and Y coordinates don't have the same length - one list has more elements than the other. Because `.plot()` assumes a paired structure in its lists, it isn't able to reconcile lists with unequal lengths. Intuitively, this makes sense because there is now no clear, logical way to map elements across lists.
-:::
-:::success
-**Exercise 13**
+
+### Exercise 13
 The multi-series line graph below appears to have a misformatted legend. How might you fix this so that data series can be identified?
 
 ```python
@@ -135,11 +144,7 @@ plt.legend(loc="upper left") # add legend in upper left
 ```
 ![figExercise13](https://hackmd.io/_uploads/rJL1w5ObGx.png)
 
-:::spoiler Answer
-The legend isn't being displayed correctly because no labels were assigned to the data series in the `.scatter()` call. If we rerun the code with labels added, the legend will be present in the upper left corner (where the white square box currently is).
-:::
-
-### 1.3 Working with combined discrete and continuous data: bar graphs 
+### 2.3 Working with combined discrete and continuous data: bar graphs 
 So far we've only looked at continuous data, but what if we wanted to combine it with our discrete data? This could include grouping our continuous variables (ex. height of students) with demographic information (ex. gender, grade level) which would be the discrete variables. For datasets which combine discrete and continuous data, bar graphs and boxplots allow for straightforward comparison of a continuous variable across these discrete categories. 
 
 To begin with, let's generate a dataset of continuous variables and discrete variables. Here, we'll assign each of our continuous variables a level which increments sequentially by 1. We will also introduce a new library here, `numpy`, which provides some useful utility for performing various numerical operations.
@@ -202,17 +207,13 @@ plt.yticks(np.arange(start=0,stop=20,step=2)) # change Y axis ticks (0 - 40, int
 plt.legend()# add legend
 ```
 ![fig7](https://hackmd.io/_uploads/SyIHU-FZGx.png)
-:::success
-**Exercise 14**
+
+### Exercise 14
 Based on the code associated with the above plot, can you predict what keyword arguments are associated with 
 1. Changing the vertical positioning of bars and
 2. Adding standard error bars?
-:::spoiler Answer
-1. To change the Y coordinate where main bars begin, we can use the `bottom` argument. Setting `bottom` equal to the values of the other series stacks bars on top of one another.
-2. Symetrical error bars for main bars can be added using the `yerr` argument. The expected input is an array or list of the same length as the number of bars
-:::
 
-### 1.3 Working with combined discrete and continuous data: boxplots
+### 2.4 Working with combined discrete and continuous data: boxplots
 
 If our discrete levels/categories are associated with distributions, boxplots are a great way to visualize and compare these distributions.
 
@@ -224,17 +225,11 @@ YBox1 = np.random.normal(loc=100,scale=20,size=100) # sample 100 points from nor
 YBox2 = np.random.normal(loc=125,scale=10,size=100) # sample 100 points from normal distribution with mean of 125 and standard deviation of 10
 YBox3 = np.random.normal(loc=75,scale=30,size=100) # sample 100 points from normal distribution with mean of 75 and standard deviation of 30
 ```
-:::success
-**Exercise 15**
+### Exercise 15
 Complete the code below to sample 500 points from a normal distribution with mean of 30 and standard deviation of 6.
 ```python
 np.____.____(____=6,____=500,____=30)
 ```
-:::spoiler Answer
-```python
-np.random.normal(scale=6,size=500,loc=30)
-```
-:::
 
 We'll then put these generated lists within another list. This creates a nested list because the lists are nested in another list.
 
@@ -282,17 +277,10 @@ plt.title('Boxplot with overlayed and jittered points')# main title
 ```
 ![fig10](https://hackmd.io/_uploads/BJSCUGFWzl.png)
 
-:::success
-**Exercise 16**
+### Exercise 16
 In the above boxplot, how might we change the 'breadth' over which our raw data points are scattered on the X axis?
-:::spoiler Answer
-The breadth of our jitter is controlled based on the `low` and `high` arguments that we provide to our `np.random.uniform()` calls. 
 
-By moving the values assigned to these arguments closer to the true X coordinate they are centered around, we can move the lower and upper bounds of our possible X coordinates closer to that central coordinate, narrowing the spread of our points. 
-:::
-
-
-## Part 2: Plotting from a Pandas dataframe
+## Part 3: Plotting from a Pandas dataframe
 Everything we've worked through has been oriented around  datasets represented as lists. What is actually probably more common is for us to work with datasets stored as dataframes, so let's see how we might translate some of what we've done so far into this context!
 
 Let's start by loading in the `gapminder` dataset we've previously worked with.
@@ -360,8 +348,7 @@ plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left',ncol=3) #shift legend outs
 ```
 ![fig13](https://hackmd.io/_uploads/HyYdKmFZfl.png)
 
-:::success
-**Exercise 17**
+### Exercise 17
 Complete the code below to generate a line graph visualizing trends in life expectancy for countries with GDP per capita in 2007 that is greater than or equal to $30000.
 
 ```python
@@ -376,20 +363,6 @@ plt.____('Year')
 plt.____('Life expectancy (years)')
 plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left',____=3) 
 ```
-:::spoiler Answer
-```python
-#extract columns
-lifeExp=dat.loc[dat['gdpPercap_2007'] >= 30000, 'lifeExp_1952':'lifeExp_2007'].T
-lifeExp.index = lifeExp.index.str.replace('lifeExp_', '') # tidy rownames
-
-#plot trends
-lifeExp.plot() # plot all series
-plt.title("Trends in life expectancy") # add main title
-plt.xlabel('Year') 
-plt.ylabel('Life expectancy (years)')
-plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left',ncol=3) 
-```
-:::
 
 ### 3.2: Scatter plots for relationships between columns
 
@@ -459,5 +432,37 @@ plt.legend([box1952['boxes'][0], box2007['boxes'][0]], ['1952', '2007']) # Legen
 ```
 ![fig16](https://hackmd.io/_uploads/BkvpgLY-zg.png)
 
-#### 
+## Part 4: Exercise answers
+### Exercise 12 
+The lists associated with X and Y coordinates don't have the same length - one list has more elements than the other. Because `.plot()` assumes a paired structure in its lists, it isn't able to reconcile lists with unequal lengths. Intuitively, this makes sense because there is now no clear, logical way to map elements across lists.
 
+### Exercise 13
+The legend isn't being displayed correctly because no labels were assigned to the data series in the `.scatter()` call. If we rerun the code with labels added, the legend will be present in the upper left corner (where the white square box currently is).
+
+### Exercise 14
+1. To change the Y coordinate where main bars begin, we can use the `bottom` argument. Setting `bottom` equal to the values of the other series stacks bars on top of one another.
+2. Symetrical error bars for main bars can be added using the `yerr` argument. The expected input is an array or list of the same length as the number of bars
+
+### Exercise 15
+```python
+np.random.normal(scale=6,size=500,loc=30)
+```
+
+### Exercise 16
+The breadth of our jitter is controlled based on the `low` and `high` arguments that we provide to our `np.random.uniform()` calls. 
+
+By moving the values assigned to these arguments closer to the true X coordinate they are centered around, we can move the lower and upper bounds of our possible X coordinates closer to that central coordinate, narrowing the spread of our points. 
+
+### Exercise 17
+```python
+#extract columns
+lifeExp=dat.loc[dat['gdpPercap_2007'] >= 30000, 'lifeExp_1952':'lifeExp_2007'].T
+lifeExp.index = lifeExp.index.str.replace('lifeExp_', '') # tidy rownames
+
+#plot trends
+lifeExp.plot() # plot all series
+plt.title("Trends in life expectancy") # add main title
+plt.xlabel('Year') 
+plt.ylabel('Life expectancy (years)')
+plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left',ncol=3) 
+```
