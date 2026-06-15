@@ -48,11 +48,11 @@ Afternoons will start at 1pm and go 'til 3pm.
 
 ### Tuesday, June 16 - morning
 
-Introduction to data analysis in Python
+[Introduction to data analysis in Python](day2-morning.html)
 
 ### Tuesday, June 16 - afternoon
 
-Data manipulation and plotting in Python
+[Data manipulation and plotting in Python](day2-afternoon.html)
 
 ### Wednesday, June 17 - morning
 
