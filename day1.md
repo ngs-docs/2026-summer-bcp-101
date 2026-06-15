@@ -11,28 +11,33 @@ nav_order: 2
 Everyone introduce themselves and say why they're interested in
 participating in this workshop!
 
-## Scope & goals
+## Scope & Goals
 
-- see how certain kinds of modern open source tech can support teaching legit data science in high school and college
-- understand, investigate, and exercises the affordances of the technology we’ll be iintroducing
-- explore ways to connect technology to needs of teachers
-- learn from teachers what they need
-- offer technology support to teachers
-- connect teachers by interest
+- See how certain kinds of modern open-source technology can support teaching data science in high school and college
+- Understand, investigate, and exercise the opportunities of the technology we’ll be introducing
+- Explore ways to connect technology to the needs of teachers
+- Learn from teachers what they need
+- Offer technological support to teachers
+- Connect teachers by interest
 
-## Structure & schedule
+## Structure & Schedule
 
-Each day, Monday-Thursday, sessions will go from 10am-noon and 1-3pm.
+Dates: Monday, June 15, to Thursday, June 18
+Morning Session: 10:00 AM - 12:00 PM (PST)
+Lunch: 12:00 PM - 1:00 PM (PST)
+Afternoon Session: 1:00 PM - 3:00 PM (PST)
 
-Monday will cover introductory material and the basic technology platform
-we are showing you.
+**Monday: Introductory material and the basic technology platform we are showing you.**
+We will begin with an overview of the goals for the week, introduce the dataset and examples we will be working with, and make sure everyone is comfortable accessing the course materials. We will also introduce the basic technology platform, including how to open notebooks, run code, save work, and troubleshoot common setup issues.
 
-Tuesday will go through the basics of programming in Python, plotting,
-and some statistics.
+**Tuesday: Basics of programming, plotting, and statistics in Python.**
+We will focus on core Python skills for working with data, including variables, lists, tables, and simple calculations. We will then use these skills to make plots, summarize data, and interpret basic statistics. The goal is to build enough comfort with Python to explore a dataset and ask simple quantitative questions.
 
-Wednesday will broaden this from specific skills to general setup.
+**Wednesday: Connecting specific skills to a general data analysis workflow.**
+We will broaden from individual coding skills to the larger process of setting up and carrying out a data analysis project. This includes organizing files, choosing useful columns, cleaning or filtering data, deciding what questions can be asked, and connecting code, plots, and interpretation into a repeatable workflow.
 
-On Thursday, we will engage with individual and group plans.
+**Thursday: Engaging with individual and group plans.**
+We will spend time developing individual or group project ideas using the tools and concepts introduced earlier in the week. Participants will identify a question, choose relevant data, outline an analysis plan, and discuss possible outputs. This session will include time for feedback, troubleshooting, and planning next steps.
 
 ## Expectations
 
@@ -48,7 +53,7 @@ especially if and as it changes :).
 CTB: cassie presentation.
 
 Over the next three days, we're going to be introducing you to a
-particular set of data science technology. The tech we're using was
+particular set of data science technology. The technology we're using was
 chosen based on our own experiences as well as our workshop last year;
 in particular, it is not only free, but works on essentially any
 computer with a modern Web browser and a keyboard - including Google
