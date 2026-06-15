@@ -126,7 +126,13 @@ the approaches needed to build your own customized site.
 
 Click on this link: [ngs-docs.github.io/2026-summer-bcp-101-jupyterlite-demo/](https://ngs-docs.github.io/2026-summer-bcp-101-jupyterlite-demo/)
 
-Then open `quick-demo.ipynb`.
+Then open `quick-demo.ipynb` on the left by double-clicking on it. You can
+maximize the tab by clicking on the folder icon (upper left).
+
+Now run the notebook by clicking on the "fast forward" icon on the menu
+bar, and click the red "Restart" button.
+
+# LUNCH BREAK! Restart at 1pm.
 
 <img width="1872" height="982" alt="Screenshot 2026-06-15 at 9 27 17 AM" src="https://github.com/user-attachments/assets/a060a3d0-d7d9-42c8-a218-ebe2cb298c5e" />
 
