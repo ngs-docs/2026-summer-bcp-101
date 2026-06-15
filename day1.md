@@ -128,6 +128,8 @@ Click on this link: [ngs-docs.github.io/2026-summer-bcp-101-jupyterlite-demo/](h
 
 Then open `quick-demo.ipynb`.
 
+<img width="1872" height="982" alt="Screenshot 2026-06-15 at 9 27 17 AM" src="https://github.com/user-attachments/assets/a060a3d0-d7d9-42c8-a218-ebe2cb298c5e" />
+
 # Hands-On Introduction to Technology
 
 ## JupyterLite
