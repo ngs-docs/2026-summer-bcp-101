@@ -157,10 +157,6 @@ To get started, go to this Web page:
 This is a custom site that we built for you. On Wed, we'll show you how
 to build one for yourself.
 
-<!-- CTB TODO:
-- put in some screenshots of the JupyterLite interface
--->
-
 <img width="1778" height="822" alt="Screenshot 2026-06-15 at 9 32 18 AM" src="https://github.com/user-attachments/assets/213cb5de-70d9-4bf5-9a8e-b609d3b7d705" />
 
 ### Exploring JupyterLite
@@ -215,11 +211,13 @@ JupyterLite site.
 
 ### Writing Text and Explanations in Markdown
 
-Basic formatting.
+You can create text cells in notebooks that support Markdown formatting.
 
-Math formatting.
+* Basic formatting.
+* Math formatting.
+* Images.
 
-Images.
+Open the `markdown-examples.ipynb` and run it.
 
 ### Storing, Downloading, and Uploading Notebooks and Figures
 
@@ -235,6 +233,12 @@ Caching.
 
 Where are files located.
 
+Clearing changes.
+
+Reloading the site.
+
+Using incognito mode to test the site.
+
 <!-- 
 CTB Maybe save for Wed:
 
@@ -247,8 +251,4 @@ CTB Maybe save for Wed:
     * pre-staged data
     * faded examples
 
-* Manipulating and working with Jupyter nb
-    * downloading and uploading files/figures
-    * printing and/or saving
-    * saving/clearing data etc.
 -->
