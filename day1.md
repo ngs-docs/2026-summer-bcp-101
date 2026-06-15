@@ -300,9 +300,9 @@ to use the new package.
 
 ### JupyterLite Gotchas.
 
-Caching. Note that each new _site_ starts fresh! (Based on the Web site address.)
+Caching. Note that each new _site_ starts fresh! (Based on the Web site address.) And then after that changes to it are saved to each browser that you run.
 
-You can clearing your own changes with the "clear cache" button under
+You can clearing your own changes to a site with the "clear cache" button under
 Help menu.
 
 If we update the site itself, then that is harder to deal with; you'll need to
