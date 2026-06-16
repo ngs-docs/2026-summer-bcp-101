@@ -744,7 +744,7 @@ print(os.listdir('data'))
 
 ## 3.6 Use `index_col` for Row Labels
 
-By default, Pandas gives rows numeric labels: `0`, `1`, `2`, and so on. For this data, it is more useful to use the `country` column as the row index.
+By default, Pandas gives rows numeric labels: `0`, `1`, `2`, and so on. These are called **indexes**, and are unique for each row. However, numbers aren't very informative to describing what's in each row, so we should change the index. For this data, it is more useful to use the `country` column as the row index. Although you can do for any column, it's good practice to use indexes that are unique.
 
 ```python
 data_oceania_country = pd.read_csv(
