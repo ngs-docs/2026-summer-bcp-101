@@ -19,6 +19,7 @@ Once we've got data ready, we can visualize data in a variety of different ways.
     - [3.1 Line plots](#31-line-plots-for-trends-within-rows-across-columns)
     - [3.2 Scatterplots](#32-scatter-plots-for-relationships-between-columns)
     - [3.3 Boxplots](#33-boxplots-to-compare-across-discrete-variables)
+    - [3.4 Statistics](#34-basic-statistics-with-scipy)
 - [Part 4: Exercise answers](#part-4-exercise-answers)
 
 ## The basics of `matplotlib`
@@ -112,7 +113,7 @@ plt.legend() # add legend
 ```
 ![fig4](https://hackmd.io/_uploads/BkBEbJu-fx.png)
 
-### Exercise 12
+### Exercise 11
 When trying to generate a line graph, the code below produces an error following the `.plot()` call. What is the most likely source of the error?
 
 ```python
@@ -124,7 +125,7 @@ speciesCount = [3, 18, 31, 38, 43, 44, 45]
 plt.scatter(area, speciesCount)
 ```
 
-### Exercise 13
+### Exercise 12
 The multi-series line graph below appears to have a misformatted legend. How might you fix this so that data series can be identified?
 
 ```python
@@ -208,7 +209,7 @@ plt.legend()# add legend
 ```
 ![fig7](https://hackmd.io/_uploads/SyIHU-FZGx.png)
 
-### Exercise 14
+### Exercise 13
 Based on the code associated with the above plot, can you predict what keyword arguments are associated with 
 1. Changing the vertical positioning of bars and
 2. Adding standard error bars?
@@ -225,7 +226,7 @@ YBox1 = np.random.normal(loc=100,scale=20,size=100) # sample 100 points from nor
 YBox2 = np.random.normal(loc=125,scale=10,size=100) # sample 100 points from normal distribution with mean of 125 and standard deviation of 10
 YBox3 = np.random.normal(loc=75,scale=30,size=100) # sample 100 points from normal distribution with mean of 75 and standard deviation of 30
 ```
-### Exercise 15
+### Exercise 14
 Complete the code below to sample 500 points from a normal distribution with mean of 30 and standard deviation of 6.
 ```python
 np.____.____(____=6,____=500,____=30)
@@ -277,7 +278,7 @@ plt.title('Boxplot with overlayed and jittered points')# main title
 ```
 ![fig10](https://hackmd.io/_uploads/BJSCUGFWzl.png)
 
-### Exercise 16
+### Exercise 15
 In the above boxplot, how might we change the 'breadth' over which our raw data points are scattered on the X axis?
 
 ## Part 3: Plotting from a Pandas dataframe
@@ -348,7 +349,7 @@ plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left',ncol=3) #shift legend outs
 ```
 ![fig13](https://hackmd.io/_uploads/HyYdKmFZfl.png)
 
-### Exercise 17
+### Exercise 16
 Complete the code below to generate a line graph visualizing trends in life expectancy for countries with GDP per capita in 2007 that is greater than or equal to $30000.
 
 ```python
@@ -396,7 +397,6 @@ leg = plt.legend(loc='lower right') #legend
 # Override the size (s) of each point inside the legend box to 30 points
 for handle in leg.legend_handles:
     handle.set_sizes([30])
-
 ```
 ![fig15](https://hackmd.io/_uploads/SyMmXSYWzx.png)
 
@@ -432,28 +432,104 @@ plt.legend([box1952['boxes'][0], box2007['boxes'][0]], ['1952', '2007']) # Legen
 ```
 ![fig16](https://hackmd.io/_uploads/BkvpgLY-zg.png)
 
+### 3.4 Basic statistics with `scipy`
+In addition to generating plots, libraries available in Python also facilitate easy application of various statistical analyses. Here, let's walk through a couple things that we can do in the `scipy` library, using out `gapminder` data frame as an example dataset.
+
+#### Mean, variance and standard deviation
+We've previously learnt in our morning session how to calculate some basic statistics on a subset of columns from a dataframe. We can also calculate statistics on a single column as well.
+
+```python
+#calculate mean, min, max on 
+pop2007Max = dat['pop_2007'].max()
+pop2007Min = dat['pop_2007'].min()
+pop2007Mean = dat['pop_2007'].mean()
+
+#print variables
+print('2007 population size minimum:',pop2007Min,
+      '\n2007 population size maximum:',pop2007Max,
+      '\n2007 population size mean:',pop2007Mean)
+```
+
+Notice above in the print statement that we include a **control character**, `\n`, which inserts a new line into the print statement. These control characters can be inserted within print statements to generate complex outputs like above.
+
+With the help of `scipy`, we can start to calculate additional statistics, like standard deviation. The way that this is implemented in the library is through the `.tstd` function, which calculates standard deviation, excluding values outside of a defined range (set by the `limits` argument). 
+
+Here, let's calculate the standard deviation of the 2007 population size column, excluding any values falling below the 5th percentile and above the 95th percentile.
+
+```python
+#get percentile values using np.percentile
+lowerBound = np.percentile(dat['pop_2007'], 5) #5th percentile
+upperBound = np.percentile(dat['pop_2007'], 95) #95
+
+#import stats module from scipy library
+from scipy import stats
+
+#calculate standard deviation
+stats.tstd(dat['pop_2007'],limits=(lowerBound,upperBound))
+```
+
+We can also perform analyses across pairs of columns such as linear regression, using just a single command! For example, let's look at the relationship between population size at the first timepoint (1952) and at the last timepoint (2007). 
+
+```python
+#perform linear regression, save to variable
+regressPopSize = stats.linregress(dat['pop_1952'],dat['pop_2007'])
+```
+
+From this object, we can pull out statistics that are of interest to us, like the slope and intercept of our regression line, as well as the Pearson correlation coefficient between our two datasets!
+
+```python
+#slope
+print("Slope:",regressPopSize.slope)
+#intercept
+print("Intercept:",regressPopSize.intercept)
+#correlation
+print("Correlation:",regressPopSize.rvalue)
+```
+
+We can plot this linear trend line alongside our scatterplot as below.
+
+```python
+plt.scatter(x=dat['pop_1952'], y=dat['pop_2007'])
+#add trendline
+plt.plot(dat['pop_1952'], regressPopSize.slope * dat['pop_1952'] + regressPopSize.intercept, 
+         color="red", linestyle=':')
+plt.title("Correaltion between population size in 1952 and 2007") # add main title
+plt.xlabel('1952 population size')  #X axis label
+plt.ylabel('2007 population size') #Y axis label
+plt.text(x=3e8, y=0.6e9, s=f"Pearson's R: {round(regressPopSize.rvalue,2)}") #add Pearson's R
+```
+
+For more formal hypothesis testing, `scipy` also has functions associated with a variety of different statistical tests. For example, below we perform a two sample T-test comparing starting and ending GDP per capita.
+
+```python
+#perform t test on 1952 and 2007 population sizes (Unequal variance)
+gdpTTest = stats.ttest_ind(dat['gdpPercap_1952'], dat['gdpPercap_2007'], equal_var=False)
+#print statement
+print(f"T-statistic: {gdpTTest.statistic}, P-value: {gdpTTest.pvalue}")
+```
+
 ## Part 4: Exercise answers
-### Exercise 12 
+### Exercise 11 
 The lists associated with X and Y coordinates don't have the same length - one list has more elements than the other. Because `.plot()` assumes a paired structure in its lists, it isn't able to reconcile lists with unequal lengths. Intuitively, this makes sense because there is now no clear, logical way to map elements across lists.
 
-### Exercise 13
+### Exercise 12
 The legend isn't being displayed correctly because no labels were assigned to the data series in the `.scatter()` call. If we rerun the code with labels added, the legend will be present in the upper left corner (where the white square box currently is).
 
-### Exercise 14
+### Exercise 13
 1. To change the Y coordinate where main bars begin, we can use the `bottom` argument. Setting `bottom` equal to the values of the other series stacks bars on top of one another.
 2. Symetrical error bars for main bars can be added using the `yerr` argument. The expected input is an array or list of the same length as the number of bars
 
-### Exercise 15
+### Exercise 14
 ```python
 np.random.normal(scale=6,size=500,loc=30)
 ```
 
-### Exercise 16
+### Exercise 15
 The breadth of our jitter is controlled based on the `low` and `high` arguments that we provide to our `np.random.uniform()` calls. 
 
 By moving the values assigned to these arguments closer to the true X coordinate they are centered around, we can move the lower and upper bounds of our possible X coordinates closer to that central coordinate, narrowing the spread of our points. 
 
-### Exercise 17
+### Exercise 16
 ```python
 #extract columns
 lifeExp=dat.loc[dat['gdpPercap_2007'] >= 30000, 'lifeExp_1952':'lifeExp_2007'].T
@@ -466,3 +542,5 @@ plt.xlabel('Year')
 plt.ylabel('Life expectancy (years)')
 plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left',ncol=3) 
 ```
+
+
