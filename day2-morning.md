@@ -50,7 +50,7 @@ In a Jupyter Notebook, your notebook should be started from the same top-level f
 'data/gapminder_gdp_oceania.csv'
 ```
 
-Let's start by using the same JupyterLite server as yesterday: <ngs-docs.github.io/2026-summer-bcp-101-jupyterlite-demo/>
+Let's start by using the same JupyterLite server as yesterday: [ngs-docs.github.io/2026-summer-bcp-101-jupyterlite-demo/](https://ngs-docs.github.io/2026-summer-bcp-101-jupyterlite-demo/)
 
 ---
 
