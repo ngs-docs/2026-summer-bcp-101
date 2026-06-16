@@ -32,7 +32,7 @@ By the end of this notebook, learners should be able to:
 
 ## Required Setup
 
-The Carpentries lesson assumes that learners have Python 3 installed and have downloaded the Gapminder lesson data. The expected folder structure is:
+This lesson assumes that learners have Python 3 installed and have downloaded the Gapminder lesson data. The expected folder structure is:
 
 ```text
 project-folder/
@@ -49,6 +49,8 @@ In a Jupyter Notebook, your notebook should be started from the same top-level f
 ```python
 'data/gapminder_gdp_oceania.csv'
 ```
+
+Let's start by using the same JupyterLite server as yesterday: ngs-docs.github.io/2026-summer-bcp-101-jupyterlite-demo/
 
 ---
 
