@@ -64,7 +64,7 @@ with the JupyterLite demo repository, which is here:
 
 [https://github.com/jupyterlite/demo](https://github.com/jupyterlite/demo)
 
-On the upper right, there should be a green button labelled "Use this
+On the upper right, there should be a green button labeled "Use this
 template." Click on it, and select "Create a new repository."
 
 Now name it. You can name it anything you like. I have hundreds of
@@ -163,7 +163,7 @@ as you wish. Keep on testing it in incognito mode, tho!
 #### Making your own template site!
 
 It is possible to make your own template repository out of any
-repository you own. This lets you develop your own "base" of filkes that
+repository you own. This lets you develop your own "base" of files that
 you use and then make copies of it.
 
 To do so, go to "Settings" again and select "Template repository". 
