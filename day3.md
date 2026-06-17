@@ -4,8 +4,6 @@ layout: home
 nav_order: 5
 ---
 
-# Morning
-
 # Using ChatGPT to generate example code
 
 I ran this query in ChatGPT this morning:
@@ -16,7 +14,88 @@ and got the [following answer](https://chatgpt.com/c/6a32bfe2-dae0-83ea-9c8a-9ed
 
 (I'll talk a bit more about ChatGPT and AI/LLM-based code generation in a bit.)
 
-# LUNCH BREAK
+# Some interim thoughts on teaching
+
+Hopefully after tuesday and this morning you’ve seen some of why we
+use this stuff.
+
+But it’s a lot, right??
+
+Why are we teaching you this, and what should you teach your students, and why?
+
+See [the data science Venn diagram](http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram):
+
+![trefoil](https://images.squarespace-cdn.com/content/v1/5150aec6e4b0e340ec52710a/1364352051365-HZAS3CLBF7ABLE3F5OBY/Data_Science_VD.png?format=2500w)
+
+I mostly teach the "hacking" because that's what students in my grad
+programs are lacking the most.
+
+I try to teach this at three levels simultaneously -
+*  practical - gotta teach something, even if details will change quickly
+* conceptual - this is how computers think and work, even if details change, you’ll still do something like *this*
+* computational thinking - this is how you have to break down problems and structure your attempted solutions
+ 
+Computer science is a completely distinct area, which contains (among other things):
+- programming and software engineering: how to effectively build and maintain software
+- data structures and algorithms: how to efficiently store and compute things
+
+I usually don’t teach programming per se - I _don’t_ teach what we did
+yesterday, usually, because it requires a whole quarter-long course
+all on its own! - but rather walk students through the interactions
+between computers and data and show them how to get results that
+they’re probably interested in. (But I also work with graduate
+students and upper division undergrads mostly, and they ahve different
+motivations.)
+
+All of which is to say this is a lifetime learning endeavor and I honestly don’t know what you all should be teaching :)
+
+My own soapbox: I focus on teaching and developing:
+
+* computational practice
+* computational thinking
+* how to build intuition by poking and prodding large data sets
+
+because these are my areas of speciality.
+
+BUT.
+
+Computers and programming are really kind of terrible. Think about all
+the problems you've had in the last few days! We spend a LOT of our time
+teaching syntax, installing software, and tracking down errors
+
+This may be changing, somewhat.
+
+what has changed recently?
+
+## Large Language Models (AI/ChatGPT/Claude)
+
+ChatGPT, Claude, and other LLMs make it easy to generate working code,
+and can also generate step-by-step installation instructions.
+
+HOWEVER:
+
+Computational precision/thinking is challenging and LLMs do not solve this. See [this nice post](https://thedatasitter.substack.com/p/dijkstras-hot-take-on-prompt-engineering).
+
+Quote:
+
+>As Dijkstra says, “Formalism isn’t a burden.” Instead, it bridges the messy realm of human intent and the exact demands of machine execution.
+
+Basically, English isn't precise enough to tell the computer what to do exactly, so guesswork is involved!
+
+There are also ethical challenges to consider: profit model; source of
+training data; and cost of running models.
+
+If you're going to use it, I suggest asking LLMs “how to do X” not
+“what should I do?”
+
+Only ask it things where you can figure out if it’s right or not
+
+And ask yourself: Is pulling apart a fully functioning example easy or hard for your audience? Can poke or prod…
+
+Let's go back to our learning goals:
+- we want to expose you to how we do things in the STEM data science research world
+- and show you a little bit of how the training community teaches those approaches,
+- and maybe see if some of those tools and approaches could be useful to you in your classroom settings.
 
 # Building and configuring your own custom site
 
@@ -186,81 +265,3 @@ Now go back to the "code" view and you will see "Use this template." Voila!
 
 ...I have about 400 repos in my GitHub account :)
 
-# End of Wed thoughts on teaching
-
-Hopefully after tuesday and this morning you’ve seen some of why we
-use this stuff.
-
-But it’s a lot, right??
-
-Why are we teaching you this, and what should you teach your students, and why?
-
-See [the data science Venn diagram](http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram):
-
-![trefoil](https://images.squarespace-cdn.com/content/v1/5150aec6e4b0e340ec52710a/1364352051365-HZAS3CLBF7ABLE3F5OBY/Data_Science_VD.png?format=2500w)
-
-I mostly teach the "hacking" because that's what students in my grad
-programs are lacking the most.
-
-I try to teach this at three levels simultaneously -
-*  practical - gotta teach something, even if details will change quickly
-* conceptual - this is how computers think and work, even if details change, you’ll still do something like *this*
-* computational thinking - this is how you have to break down problems and structure your attempted solutions
- 
-Computer science is a completely distinct area, which contains (among other things):
-- programming and software engineering: how to effectively build and maintain software
-- data structures and algorithms: how to efficiently store and compute things
-
-I usually don’t teach programming per se - I _don’t_ teach what we did
-yesterday, usually, because it requires a whole quarter-long course
-all on its own! - but rather walk students through the interactions
-between computers and data and show them how to get results that
-they’re probably interested in. (But I also work with graduate
-students and upper division undergrads mostly, and they ahve different
-motivations.)
-
-All of which is to say this is a lifetime learning endeavor and I honestly don’t know what you all should be teaching :)
-
-My own soapbox: I focus on teaching and developing:
-
-* computational practice
-* computational thinking
-* how to build intuition by poking and prodding large data sets
-
-because these are my areas of speciality.
-
-BUT.
-
-Computers and programming are really kind of terrible. Think about all
-the problems you've had in the last few days! We spend a LOT of our time
-teaching syntax, installing software, and tracking down errors
-
-This may be changing, somewhat.
-
-what has changed recently?
-
-ChatGPT, Claude, and other LLMs make it easy to generate working code,
-and can also generate step-by-step installation instructions.
-
-HOWEVER:
-
-Computational precision/thinking is challenging and LLMs do not solve this. See [this nice post](https://thedatasitter.substack.com/p/dijkstras-hot-take-on-prompt-engineering).
-
->As Dijkstra says, “Formalism isn’t a burden.” Instead, it bridges the messy realm of human intent and the exact demands of machine execution.
-
-Basically, English isn't precise enough to tell the computer what to do exactly, so guesswork is involved!
-
-There are also ethical challenges to consider: profit model; source of
-training data; and cost of running models.
-
-If you're going to use it, I suggest asking LLMs “how to do X” not
-“what should I do?”
-
-Only ask it things where you can figure out if it’s right or not
-
-And ask yourself: Is pulling apart a fully functioning example easy or hard for your audience? Can poke or prod…
-
-Let's go back to our learning goals:
-- we want to expose you to how we do things in the STEM data science research world
-- and show you a little bit of how the training community teaches those approaches,
-- and maybe see if some of those tools and approaches could be useful to you in your classroom settings.
