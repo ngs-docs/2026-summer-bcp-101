@@ -56,7 +56,7 @@ Afternoons will start at 1pm and go 'til 3pm.
 
 ### Wednesday, June 17 - morning
 
-Under construction.
+[More fun with notebooks](day3.html)
 
 ### Wednesday, June 17 - afternoon
 

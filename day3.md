@@ -6,6 +6,40 @@ nav_order: 5
 
 # Morning
 
+## Live coding some stats functions
+
+Visit
+[ctb.github.io/2026-bcp-101-stats](https://ctb.github.io/2026-bcp-101-stats/)
+and let's work through defining and running some Python functions.
+
+(You can just watch, or you can follow along ;))
+
+## Using ChatGPT to generate example code
+
+I ran this query in ChatGPT this morning:
+
+>I would like to show people how to fit a titration curve in a Jupyter Notebook using Python, pandas, numpy and scipy. Could you please generate a fake titration data set with noise and then provide code that does a fit and generates a graph?
+
+and got the [following answer](https://chatgpt.com/c/6a32bfe2-dae0-83ea-9c8a-9ed4bbe990c8). Let's try running it in a new notebook in [ctb.github.io/2026-bcp-101-stats](https://ctb.github.io/2026-bcp-101-stats/)!
+
+(I'll talk a bit more about ChatGPT and AI/LLM-based code generateion in a bit.)
+
+## Finding lessons online
+
+I found [this paper](https://arxiv.org/html/2405.16675v1), "Using
+Jupyter Notebooks to foster computational skills and professional
+practice in an introductory physics lab course", which led me to
+[this code repository](https://github.com/etufino/Jupyter-Notebooks-in-Lab-Course-Uni-Potsdam), which contains some interesting notebooks:
+
+- [simulation of projectile motion](https://github.com/etufino/Jupyter-Notebooks-in-Lab-Course-Uni-Potsdam/blob/main/Application_Examples/Projectile_Motion/MyFirstSimulation_projectile_motion_EN.ipynb)
+- [random numbers and histograms](https://github.com/etufino/Jupyter-Notebooks-in-Lab-Course-Uni-Potsdam/blob/main/Application_Examples/Random%20Numbers%20and%20Histograms/Random_Numbers_and_Histograms_EN.ipynb)
+- [plotting Co2 data](https://github.com/etufino/Jupyter-Notebooks-in-Lab-Course-Uni-Potsdam/blob/main/Application_Examples/ExamplePlotting_CO2_Data_EN.ipynb)
+- [Measuring the illuminance of a light bulb as a function of distance source-detector](https://github.com/etufino/Jupyter-Notebooks-in-Lab-Course-Uni-Potsdam/blob/main/Application_Examples/Example_of_fit_Illuminance_of_a_light_bulb_with_Pandas_EN.ipynb)
+- [Introducing the moving average](https://github.com/etufino/Jupyter-Notebooks-in-Lab-Course-Uni-Potsdam/blob/main/Application_Examples/Sunspots_and_moving_average/Example_of_moving_average_applied_to_sunspots_number_EN.ipynb)
+
+I've copied many of these over to the `physics/` directory in 
+[ctb.github.io/2026-bcp-101-stats](https://ctb.github.io/2026-bcp-101-stats/); let's try running them!
+
 # LUNCH BREAK
 
 # Building and configuring your own custom site
@@ -173,3 +207,68 @@ Now go back to the "code" view and you will see "Use this template." Voila!
 #### There is no limit to the number of repositories or sites in your GitHub account
 
 ...I have about 400 repos in my GitHub account :)
+
+# End of Wed thoughts on teaching
+
+Hopefully after tuesday and this morning you’ve seen some of why we
+use this stuff.
+
+But it’s a lot, right??
+
+Why are we teaching you this, and what should you teach your students, and why?
+
+See [the data science Venn diagram](http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram):
+
+![trefoil](https://images.squarespace-cdn.com/content/v1/5150aec6e4b0e340ec52710a/1364352051365-HZAS3CLBF7ABLE3F5OBY/Data_Science_VD.png?format=2500w)
+
+I mostly teach the "hacking" because that's what students in my grad
+programs are lacking the most.
+
+I try to teach this at three levels simultaneously -
+*  practical - gotta teach something, even if details will change quickly
+* conceptual - this is how computers think and work, even if details change, you’ll still do something like *this*
+* computational thinking - this is how you have to break down problems and structure your attempted solutions
+ 
+Computer science is a completely distinct area, which contains (among other things):
+- programming and software engineering: how to effectively build and maintain software
+- data structures and algorithms: how to efficiently store and compute things
+
+I usually don’t teach programming per se - I _don’t_ teach what we did
+yesterday, usually, because it requires a whole quarter-long course
+all on its own! - but rather walk students through the interactions
+between computers and data and show them how to get results that
+they’re probably interested in. (But I also work with graduate
+students and upper division undergrads mostly, and they ahve different
+motivations.)
+
+All of which is to say this is a lifetime learning endeavor and I honestly don’t know what you all should be teaching :)
+
+My own soapbox: I focus on teaching and developing:
+
+* computational practice
+* computational thinking
+* how to build intuition by poking and prodding large data sets
+
+BUT.
+
+Computers and programming are really kind of terrible. Think about all
+the problems you've had in the last few days!
+
+This may be changing.
+
+<!--
+what has changed recently?
+	- LLMs
+	- computational precision/thinking
+	- ethical challenges etc
+	- suggest, ask it “how to do X” not “what should I do?”
+	- show ChatGPT writing specific code/getting syntax right
+	- only ask it things where you can figure out if it’s right or not
+	- >As Dijkstra says, “Formalism isn’t a burden.” Instead, it bridges the messy realm of human intent and the exact demands of machine execution.
+	- Is pulling apart a fully functioning example easy or hard? Can poke or prod…
+- back to learning goals
+	- we want to expose you to how we do things in the STEM data science research world
+	- and show you a little bit of how the training community teaches those approaches,
+	- and maybe see if some of those tools and approaches could be useful to you in your classroom settings,
+
+-->
