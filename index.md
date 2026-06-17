@@ -56,7 +56,7 @@ Afternoons will start at 1pm and go 'til 3pm.
 
 ### Wednesday, June 17 - morning
 
-[Revisiting JupyterLite and notebooks](day3.html#revisiting-jupyterlite-and-notebooks)
+Under construction.
 
 ### Wednesday, June 17 - afternoon
 
