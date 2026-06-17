@@ -288,7 +288,7 @@ Try putting:
 %pip install matplotlib_venn
 ```
 in one cell, and running it. This will find, download, and install the
-[matplotlib_venn]() package.
+[matplotlib_venn](https://pypi.org/project/matplotlib-venn/) package.
 
 Then, in another cell, run:
 ```python
