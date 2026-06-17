@@ -69,7 +69,8 @@ template." Click on it, and select "Create a new repository."
 
 Now name it. You can name it anything you like. I have hundreds of
 these so I tend to put the year in, but you can use something short,
-like "bcp-101 demo".
+like "bcp-101-demo". Note that spaces and "weird" symbols aren't
+allowed - just letters, numbers, and dashes.
 
 You can leave Description blank, if you like, or enter something to help you
 and others know what it is - "Demo of jupyterlite", maybe?
@@ -113,4 +114,62 @@ in an incognito window...) if you like!
 
 ### Step 4 - customize your Web site!
 
-Under construction.
+In the GitHub repository, you will see a bunch of files. Anything in
+"content" will end up in your deployed GitHub Pages Web site and hence
+in your JupyterLite site.
+
+You can upload any file you want here, as long as it's under ~50 MB.
+
+Let's start by doing two things: first, deleting some files; and second,
+adding our own file.
+
+To delete a file, click on it to view it. Then go to the three dots on
+the upper right, and select "Delete" from the menu. Then select
+"commit changes", and then "commit changes" again.
+
+Try deleting 'javascript.ipynb'!
+
+To add a file, go to 'content' and click "Add file", and then select
+"Upload files".  You can now select or drag/drop files to add to your site.
+
+Let's try adding a notebook!
+
+The question you might ask is ... where do I get a notebook??  The answer is,
+anywhere! You can download one from your existing JupyterLite demo sites
+from day 1 or day 2, OR you can find one on GitHub.
+
+If you need one, try going to
+[this link](https://github.com/ngs-docs/2026-summer-bcp-101-jupyterlite-demo2/tree/main/content)
+and clicking on `markdown-examples.ipynb`. Now click the little
+download link on the right side, and it will bring it to your computer (where
+the file lands will differ by computer and browser, sorry...) Now go find it and select it to upload.
+
+### Step 5 - test your site
+
+Each time you change your repository, GitHub runs the "Actions" to build
+the new Web site. This takes between 30 seconds and 5 minutes. You can
+check on this by going to Actions and waiting for it to turn green.
+
+Now, go to your "Code" view and select the blue link, and open it in
+incognito mode. You should see your site with all your adjusted content!
+
+### Step 6 - Celebrate!
+
+OK, really, iterate :). You can keep on adjusting and editing your site
+as you wish. Keep on testing it in incognito mode, tho!
+
+### Post-workflow notes
+
+#### Making your own template site!
+
+It is possible to make your own template repository out of any
+repository you own. This lets you develop your own "base" of filkes that
+you use and then make copies of it.
+
+To do so, go to "Settings" again and select "Template repository". 
+
+Now go back to the "code" view and you will see "Use this template." Voila!
+
+#### There is no limit to the number of repositories or sites in your GitHub account
+
+...I have about 400 repos in my GitHub account :)
