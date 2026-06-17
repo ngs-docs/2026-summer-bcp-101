@@ -22,7 +22,7 @@ I ran this query in ChatGPT this morning:
 
 and got the [following answer](https://chatgpt.com/c/6a32bfe2-dae0-83ea-9c8a-9ed4bbe990c8). Let's try running it in a new notebook in [ctb.github.io/2026-bcp-101-stats](https://ctb.github.io/2026-bcp-101-stats/)!
 
-(I'll talk a bit more about ChatGPT and AI/LLM-based code generateion in a bit.)
+(I'll talk a bit more about ChatGPT and AI/LLM-based code generation in a bit.)
 
 ## Finding lessons online
 
@@ -161,7 +161,7 @@ To delete a file, click on it to view it. Then go to the three dots on
 the upper right, and select "Delete" from the menu. Then select
 "commit changes", and then "commit changes" again.
 
-Try deleting 'javascript.ipynb'!
+Try deleting `javascript.ipynb`!
 
 To add a file, go to 'content' and click "Add file", and then select
 "Upload files".  You can now select or drag/drop files to add to your site.
@@ -170,7 +170,9 @@ Let's try adding a notebook!
 
 The question you might ask is ... where do I get a notebook??  The answer is,
 anywhere! You can download one from your existing JupyterLite demo sites
-from day 1 or day 2, OR you can find one on GitHub.
+from day 1 or day 2, OR you can find one on GitHub, or write a new one yourself
+in a running JupyterLite and save it locally for later upload to your
+new GitHub repository.
 
 If you need one, try going to
 [this link](https://github.com/ngs-docs/2026-summer-bcp-101-jupyterlite-demo2/tree/main/content)
@@ -192,9 +194,9 @@ incognito mode. You should see your site with all your adjusted content!
 OK, really, iterate :). You can keep on adjusting and editing your site
 as you wish. Keep on testing it in incognito mode, tho!
 
-### Post-workflow notes
+## Post-workflow notes
 
-#### Making your own template site!
+### Making your own template site!
 
 It is possible to make your own template repository out of any
 repository you own. This lets you develop your own "base" of files that
@@ -204,7 +206,7 @@ To do so, go to "Settings" again and select "Template repository".
 
 Now go back to the "code" view and you will see "Use this template." Voila!
 
-#### There is no limit to the number of repositories or sites in your GitHub account
+### There is no limit to the number of repositories or sites in your GitHub account
 
 ...I have about 400 repos in my GitHub account :)
 
@@ -249,26 +251,40 @@ My own soapbox: I focus on teaching and developing:
 * computational thinking
 * how to build intuition by poking and prodding large data sets
 
+because these are my areas of speciality.
+
 BUT.
 
 Computers and programming are really kind of terrible. Think about all
-the problems you've had in the last few days!
+the problems you've had in the last few days! We spend a LOT of our time
+teaching syntax, installing software, and tracking down errors
 
-This may be changing.
+This may be changing, somewhat.
 
-<!--
 what has changed recently?
-	- LLMs
-	- computational precision/thinking
-	- ethical challenges etc
-	- suggest, ask it “how to do X” not “what should I do?”
-	- show ChatGPT writing specific code/getting syntax right
-	- only ask it things where you can figure out if it’s right or not
-	- >As Dijkstra says, “Formalism isn’t a burden.” Instead, it bridges the messy realm of human intent and the exact demands of machine execution.
-	- Is pulling apart a fully functioning example easy or hard? Can poke or prod…
-- back to learning goals
-	- we want to expose you to how we do things in the STEM data science research world
-	- and show you a little bit of how the training community teaches those approaches,
-	- and maybe see if some of those tools and approaches could be useful to you in your classroom settings,
 
--->
+ChatGPT, Claude, and other LLMs make it easy to generate working code,
+and can also generate step-by-step installation instructions.
+
+HOWEVER:
+
+Computational precision/thinking is challenging and LLMs do not solve this. See [this nice post](https://thedatasitter.substack.com/p/dijkstras-hot-take-on-prompt-engineering).
+
+>As Dijkstra says, “Formalism isn’t a burden.” Instead, it bridges the messy realm of human intent and the exact demands of machine execution.
+
+Basically, English isn't precise enough to tell the computer what to do exactly, so guesswork is involved!
+
+There are also ethical challenges to consider: profit model; source of
+training data; and cost of running models.
+
+If you're going to use it, I suggest asking LLMs “how to do X” not
+“what should I do?”
+
+Only ask it things where you can figure out if it’s right or not
+
+And ask yourself: Is pulling apart a fully functioning example easy or hard for your audience? Can poke or prod…
+
+Let's go back to our learning goals:
+- we want to expose you to how we do things in the STEM data science research world
+- and show you a little bit of how the training community teaches those approaches,
+- and maybe see if some of those tools and approaches could be useful to you in your classroom settings.
