@@ -30,6 +30,8 @@ I've copied many of these over to the `physics/` directory in
 
 ## Other Teaching strategies
 
+A good workshop - [Carpentries Instructor Training](https://carpentries.github.io/instructor-training/01-welcome.html).
+
 - Pre-filled notebook (maybe with faded examples)
   - note: can make read-only, forcing a copy
 - HackMD + copy/paste
