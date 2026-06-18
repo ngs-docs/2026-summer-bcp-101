@@ -28,17 +28,28 @@ practice in an introductory physics lab course", which led me to
 I've copied many of these over to the `physics/` directory in 
 [ctb.github.io/2026-bcp-101-stats](https://ctb.github.io/2026-bcp-101-stats/); let's try running them!
 
-## Other Teaching strategies demo
+## Other Teaching strategies
 
 - Pre-filled notebook (maybe with faded examples)
+  - note: can make read-only, forcing a copy
 - HackMD + copy/paste
-
+  - live update;
+  - an independent and easily accessible record of lesson;
 
 ## Alternatives to JupyterLite: discuss & demo
 
 - Google Colab
+  - more power than locally run jupyterlite;
+  - can install a wide range of software;
+  - unreliable over long term;
 - mybinder
+  - unreliable over long term;
+  - supports RStudio;
 - local install of JupyterLab; JupyterHub
+  - difficult for some to install;
+  - does not work on Chromebooks;
+  - considerably more powreful than jupyerlite;
+  - can install a wide range of software;
 
 # How can we support you?
 
